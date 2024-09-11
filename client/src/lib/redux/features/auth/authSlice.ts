@@ -1,0 +1,27 @@
+// 90. Reduktory i dostawcy authSlice
+// https://redux-toolkit.js.org/api/createslice
+import { createSlice } from "@reduxjs/toolkit";
+
+interface AuthState {
+	isAuthenticated: boolean;
+}
+
+const initialState: AuthState = {
+	isAuthenticated: false,
+};
+
+const authSlice = createSlice({
+	name: "auth",
+	initialState,
+	reducers: {
+		setAuth: (state) => {
+			state.isAuthenticated = true;
+		},
+		setLogout: (state) => {
+			state.isAuthenticated = false;
+		},
+	},
+});
+
+export const { setAuth, setLogout } = authSlice.actions;
+export default authSlice.reducer;
