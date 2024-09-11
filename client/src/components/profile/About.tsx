@@ -16,6 +16,7 @@ import {
 	Star,
 	UserRoundCheck,
 	AlignVerticalSpaceAround,
+	FileDigit,
 } from "lucide-react";
 import { capitalizeFirstLetter, formatDate } from "@/utils";
 import ProtectedRoute from "../shared/ProtectedRoutes";
@@ -34,7 +35,7 @@ function AboutContent() {
 	const baseapartments = profile?.apartments_base?.toString().slice(0, 100);
 	return (
 		<TabsContent value="about">
-			<div className="grid grid-cols-1 gap-4 p-4 mt-2 md:grid-cols-2 2xl:grid-cols-3">
+			<div className="mt-2 grid grid-cols-1 gap-4 p-4 md:grid-cols-2 2xl:grid-cols-3">
 				{/* column 1 */}
 				<div className="space-y-3">
 					<ProfileItem
@@ -88,8 +89,8 @@ function AboutContent() {
 						value={profile?.apartment?.floor.toString() || "None"}
 					/>
 					<ProfileItem
-						icon={<Home className="tab-icon" />}
-						label="Apartment"
+						icon={<FileDigit className="tab-icon" />}
+						label="Unit Number"
 						value={profile?.apartment?.unit_number || "None"}
 					/>
 
@@ -98,17 +99,27 @@ function AboutContent() {
 						label="Average Rating"
 						value={profile?.average_rating?.toString() || ""}
 					/>
-
-					{/*<ProfileItem
+					{/*
+					<ProfileItem
 						icon={<Hotel className="tab-icon" />}
 						label="Apartment Base"
 						// value={profile?.apartments_base?.toString().slice(0, 100) || "json"}
-					/>*/}
-
+					/>
+					<ProfileItem
+						icon={<Hotel className="tab-icon" />}
+						label="Apartment Base Profile"
+						value={profile?.apartments_base_profile?.toString().slice(0, 100) || "json"}
+					/> 
+					*/}
+					<ProfileItem
+						icon={<Hotel className="tab-icon" />}
+						label="Apartment Id"
+						value={profile?.apartment_profile?.toString() || ""}
+					/>
 					<div className="prose max-w-none">
 						<p>
 							<span className="tab-font">Bio:</span>
-							<span className="font-medium dark:font-normal text-green-900 dark:text-babyPowder">
+							<span className="dark:text-babyPowder font-medium text-green-900 dark:font-normal">
 								{profile?.bio || "You have not added any bio info yet!"}
 							</span>
 						</p>

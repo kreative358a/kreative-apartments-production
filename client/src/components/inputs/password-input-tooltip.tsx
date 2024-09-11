@@ -106,17 +106,17 @@ const PasswordInputTooltip = React.forwardRef<
 						showPassword ? (
 							<EyeIcon
 								onClick={() => setShowPassword(false)}
-								className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8"
+								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
 							/>
 						) : (
 							<EyeOffIcon
 								onClick={() => setShowPassword(true)}
-								className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8"
+								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
 							/>
 						)
 					}
 					className={
-						"bg-slate-50/40 dark:bg-slate-800/40 border-blue-900/60 dark:border-blue-200/60 border-2"
+						"border-2 border-blue-900/60 bg-slate-50/40 dark:border-blue-200/60 dark:bg-slate-800/40"
 					}
 					{...props}
 					ref={ref}

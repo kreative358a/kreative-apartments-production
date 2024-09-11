@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { setSearchTerm } from "@/lib/redux/features/users/userSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks/typedHooks";
 import Image from "next/image";
+import React from "react";
 
 const UsersSearch = () => {
 	// hak wysyłania aplikacji
@@ -18,7 +19,7 @@ const UsersSearch = () => {
 		dispatch(setSearchTerm(event.target.value));
 	}; 
 	return (
-		<div className="bg-blue-100/60 dark:bg-blue-900/60 hover:bg-blue-100/80 dark:hover:bg-blue-900/80  mb-3 flex min-h-[56px] w-full grow rounded-full border-blue-500/40 hover:border-blue-500/60 border-2">
+		<div className="mb-3 flex min-h-[56px] w-full  grow rounded-full border-2 border-blue-500/40 bg-blue-100/60 hover:border-blue-500/60 hover:bg-blue-100/80 dark:bg-blue-900/60 dark:hover:bg-blue-900/80">
 			<Image
 				src="/assets/icons/search.svg"
 				alt="Search"
@@ -31,7 +32,7 @@ const UsersSearch = () => {
 				type="search"
 				value={searchTerm}
 				onChange={handleInputChange}
-				className="bg-transparent search-text no-focus text-blue-950 dark:text-blue-50 border-none shadow-none outline-none"
+				className="search-text no-focus m-auto border-none bg-transparent text-blue-950 shadow-none outline-none dark:text-blue-50"
 			/>
 		</div>
 	);

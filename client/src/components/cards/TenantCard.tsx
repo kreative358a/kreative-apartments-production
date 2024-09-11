@@ -50,7 +50,7 @@ function TenantCardContent() {
 	return (
 		<div>
 			<UsersSearch />
-			<h1 className="flex-center font-robotoSlab text-blue-950 dark:text-orange-500 text-3xl md:text-4xl xl:text-5xl">
+			<h1 className="flex-center font-robotoSlab text-3xl text-blue-950 md:text-4xl xl:text-5xl dark:text-orange-500">
 				All Tenants - ({data?.profiles.results.length})
 			</h1>
 
@@ -59,11 +59,11 @@ function TenantCardContent() {
 					data.profiles.results.map((tenant) => (
 						<Card
 							key={tenant.id}
-							className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 border-blue-900/60 dark:border-blue-200/60 border-2 hover:scale-105 duration-300 box-shadow max-2xl:max-w-['480px'] max-sm:mx-auto"
+							className="box-shadow hover:scale-103 mx-auto border-2 border-blue-900/60 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-blue-200/60 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 						>
 							<CardContent>
 								<CardHeader className="flex-col-center text-center">
-									<Avatar className="border-orange-500 mx-auto w-28 h-32 overflow-hidden rounded-full border-4 object-cover">
+									<Avatar className="mx-auto h-32 w-28 overflow-hidden rounded-full border-4 border-orange-500 object-cover">
 										<AvatarImage
 											alt="User profile avatar"
 											src={

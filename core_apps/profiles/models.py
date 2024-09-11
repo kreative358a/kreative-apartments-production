@@ -104,16 +104,6 @@ class Profile(TimeStampedModel):
     
     apartment_profile = models.CharField(verbose_name=_("Apartment Id"), max_length=10, blank=True, null=True, default="")
     
-    # apartment_user = models.ForeignKey(
-    #     Apartment, 
-    #     to_field="apartment_id", 
-    #     related_name="apartment_user_id",
-    #     on_delete=models.SET_NULL,
-    #     null=True,
-    #     blank=True,
-    #     verbose_name=_("Apartment User Id")
-    #     )
-    # title = models.CharField(verbose_name=_("Title"), max_length=250, default="title")
 
     def __str__(self) -> str:
         return f"{self.user.first_name}'s Profile"
@@ -124,17 +114,7 @@ class Profile(TimeStampedModel):
 
     def update_reputation(self):
         self.reputation = max(0, 100 - self.report_count * 20)
-        
-    # def save_apartments_base(self):
-    #     try:
-    #         apartmentsbase = ApartmentBase.objects.all()
-    #         if apartmentsbase.count() > 0: 
-    #             apartmentsbase = ApartmentBase.objects.all()[0]                
-    #             self.apartments_base_profile = apartmentsbase
-    #             super(Post, self).save(*args, **kwargs)
-                
-    #     except Exception as e:
-    #         print(f"124. apartmennts Exception as {e}")                   
+                     
                 
     def save(self, *args, **kwargs):
         self.update_reputation()
@@ -144,9 +124,6 @@ class Profile(TimeStampedModel):
         average = self.user.received_ratings.aggregate(Avg("rating"))["rating__avg"]
         return average if average is not None else 0.0
     
-    # def get_apartment_user_id(self):
-    #     apartment_user_id = self.user.apartment["apartment_id"]
-    #     return apartment_user_id if apartment_user_id is not None else ""  
 
 @receiver(pre_save, sender=Profile)
 def save_apartments_base(sender, instance, *args, **kwargs):

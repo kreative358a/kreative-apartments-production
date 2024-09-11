@@ -68,7 +68,7 @@ export default function UpdateIssueForm({ params }: UpdateParamsProps) {
 				<div>
 					<label
 						htmlFor="Status"
-						className="h4-semibold text-blue-900 dark:text-babyPowder"
+						className="h4-semibold dark:text-babyPowder text-blue-900"
 					>
 						Status
 					</label>
@@ -108,14 +108,14 @@ export default function UpdateIssueForm({ params }: UpdateParamsProps) {
 					</div>
 					{/* określamy obsługę błędów */}
 					{errors.status && (
-						<p className="min-h-4 max-h-6 font-medium dark:font-normal pl-6 my-0.5 text-sm leading-4 text-red-500">
+						<p className="my-0.5 max-h-6 min-h-4 pl-6 text-sm font-medium leading-4 text-red-500 dark:font-normal">
 						⚠ {errors.status.message}</p>
 					)}
 				</div>
 
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-800/80 hover:bg-blue-800 dark:bg-orange-500/80 dark:hover:bg-orange-500 mt-2 w-full text-blue-50/80 hover:text-blue-50"
+					className="h4-semibold mt-2 w-full bg-blue-800/80 text-blue-50/80 hover:bg-blue-800 hover:text-blue-50 dark:bg-orange-500/80 dark:hover:bg-orange-500"
 					// odpowiada za to żę wyłączony rekwizyt będzie regulowany przez stan łatwego załadunku
 					disabled={isLoading}
 				>

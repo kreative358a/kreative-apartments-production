@@ -30,9 +30,6 @@ ADMINS = [
 
 """
 
-# ADMINS = [
-    ("Alpha Omondi Ogilo", "api.imperfect@gmail.com"),
-]
 
 EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
 EMAIL_HOST = getenv("EMAIL_HOST")

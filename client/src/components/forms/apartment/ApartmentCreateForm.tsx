@@ -130,7 +130,7 @@ export default function ApartmentCreateForm() {
 					onChange={(e) => setBuildingCreate(e.target.value)}
 
 					startIcon={
-						<Building className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Building className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -147,7 +147,7 @@ export default function ApartmentCreateForm() {
 					errors={errors}
 
 					startIcon={
-						<Building className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Building className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -161,7 +161,7 @@ export default function ApartmentCreateForm() {
 					onChange={(e) => setUnitNumberCreate(e.target.value)}
 
 					startIcon={
-						<FileDigit className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<FileDigit className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 				<FormFieldComponent
@@ -173,10 +173,10 @@ export default function ApartmentCreateForm() {
 					// value={apartment_idObjC.apartment_id=`${buildingObjC.building}_${floorObjC.floor}_${unit_numberObjC.unit_number}`}
 					value={`${buildingCreate}_${floorCreate}_${unit_numberCreate}` || ""}
 					startIcon={
-						<Building className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Building className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
-					/*onChange={(event: { target: { value: string; }; }) => {
+					/* onChange={(event: { target: { value: string; }; }) => {
 						const val: string = event.target.value;
 						setApartmentIdObjC((prevState) => {
 						  return { ...prevState, apartment_id: val };
@@ -200,15 +200,15 @@ export default function ApartmentCreateForm() {
 						});
 					  }} */
 					startIcon={
-						<Building className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Building className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
 				<Button
 					type="submit"
-					className="mt-6 h4-semibold bg-eerieBlue dark:bg-orange-500 w-full text-white"
+					className="h4-semibold bg-eerieBlue mt-6 w-full text-white dark:bg-orange-500"
 					disabled={isLoading}
-					/*onClick={(e) =>{
+					/* onClick={(e) =>{
 						setFocus("apartment_id"), handleSubmit(onSubmit)(e)
 					}} */
 					onClick={() => {

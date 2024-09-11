@@ -85,7 +85,7 @@ function CreatePostFormContent() {
 					errors={errors}
 					placeholder="Post Title"
 					startIcon={
-						<FileText className="text-blue-800 dark:text-blue-50 size-8" />
+						<FileText className="size-8 text-blue-800 dark:text-blue-50" />
 					}
 				/>
 				<FormFieldComponent
@@ -112,13 +112,13 @@ function CreatePostFormContent() {
 								{field.value.map((tag: string, index: number) => (
 									<Badge
 										key={index}
-										className="border-orange-500 dark:border-orange-500 mb-1 mt-1 mr-2 inline-flex items-center border text-lime-500 dark:text-lime-500"
+										className="mb-2 mr-2 mt-1 inline-flex items-center border border-orange-500 py-1 text-lime-700 dark:border-orange-500 dark:text-lime-500"
 									>
 										{tag}
 										<button
 											type="button"
 											onClick={() => handleRemoveTag(tag, field)}
-											className="ml-1.5 cursor-pointer text-red-600 dark:text-red-600"
+											className="my-auto ml-1.5 cursor-pointer text-red-600 dark:text-red-600"
 										>
 											<XIcon className="size-5" />
 										</button>
@@ -130,7 +130,7 @@ function CreatePostFormContent() {
 								id="tags"
 								placeholder="Add your tags..."
 								onKeyDown={(e) => handleInputKeyDown(e, field)}
-								className="flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+								className="border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:bg-slate-50/80 focus:outline-none focus:ring focus-visible:ring-offset-0  dark:border-blue-200/60 dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80"
 							/>
 						</>
 					)}
@@ -142,7 +142,7 @@ function CreatePostFormContent() {
 
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-900/80 hover:bg-blue-900 dark:bg-orange-500/80 dark:hover:bg-orange-500 w-full text-blue-50"
+					className="h4-semibold mt-4 w-full bg-blue-900/80 text-blue-50 hover:bg-blue-900 dark:bg-orange-500/80 dark:hover:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Create Your Post`}

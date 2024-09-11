@@ -35,20 +35,20 @@ import customStyles from "../selectStyles";
 import { type ClassValue, clsx } from "clsx";
 import { selectComponent, selectClassStyle, selectStyle } from "../myselectStyles";
 
-import { getApartmentsBase } from "./ApartmentsBase";
+import { useGetApartmentsBase } from "./ApartmentsBase";
 
 
 // export default function ApartmentSelectForm() {
 export const ApartmentSelectForm = ({ ...props }: Props) => {
 	// const ApartmentSelectForm: FC = () => {
 
-	const apartmentsBase: string = getApartmentsBase().toString();
+	const apartmentsBase: string = useGetApartmentsBase().toString();
 
 	const apartmentsJson: string =
 		'{"Building-A": {"Floor-0": ["0-1 disabled", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-B": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-C": {"Floor-1": ["0-1", "0-2", "0-3", "0-4"], "Floor-2": ["1-1", "1-2", "1-3", "1-4"], "Floor-3": ["2-1", "2-2", "2-3", "2-4"], "Floor-4": ["3-1", "3-2", "3-3", "3-4"]}, "Building-D": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}}';
 
 	// const baseapartments = BaseApartments
-	//const apartmentsObject = data?.apartment;
+	// const apartmentsObject = data?.apartment;
 	const apartmentsObject: Record<string, Record<string, string[]>> = JSON.parse(
 		apartmentsBase || apartmentsJson,
 	);
@@ -81,7 +81,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 		},
 	});
 
-	/*React.useEffect(() => {
+	/* React.useEffect(() => {
 		setFocus("building");
 	}, [setFocus]); */
 
@@ -116,7 +116,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 			setFocus("building");
 		}, 10);
 
-		//setValue("text", selectedOption.value, { shouldTouch: true });
+		// setValue("text", selectedOption.value, { shouldTouch: true });
 	};
 
 	const handleFloorSelectChange = (selectedOption: any) => {
@@ -161,7 +161,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 			>
 				<label
 					htmlFor="building-select"
-					className="h4-semibold text-blue-900 dark:text-blue-50 mb-0"
+					className="h4-semibold mb-0 text-blue-900 dark:text-blue-50"
 				>
 					Select Building
 				</label>
@@ -190,13 +190,13 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					errors={errors}
 					placeholder="building name"
 					startIcon={
-						<Building className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Building className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
 				<label
 					htmlFor="floor-select"
-					className="h4-semibold text-blue-900 dark:text-blue-50 mb-0"
+					className="h4-semibold mb-0 text-blue-900 dark:text-blue-50"
 				>
 					Select Floor
 				</label>
@@ -229,20 +229,20 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					errors={errors}
 					placeholder="floor number"
 					startIcon={
-						<AlignVerticalSpaceAround className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<AlignVerticalSpaceAround className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
 
 				<label
 					htmlFor="number-select"
-					className="h4-semibold text-blue-900 dark:text-blue-50 mb-0"
+					className="h4-semibold mb-0 text-blue-900 dark:text-blue-50"
 				>
 					Select Unit Number
 				</label>
 				<Select
 				isSearchable={false}
-				isClearable={true}
+				// isClearable={true}
 					className="mt-0 w-full"
 					options={unitNumberOptions || undefined}
 					value={{
@@ -267,7 +267,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					errors={errors}
 					placeholder="apartment number"
 					startIcon={
-						<FileDigit className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<FileDigit className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
@@ -282,7 +282,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					}
 					errors={errors}
 					startIcon={
-						<WalletMinimal className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<WalletMinimal className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
@@ -293,13 +293,13 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					value={"disabled"}
 					errors={errors}
 					startIcon={
-						<Ban className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Ban className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					readOnly={true}
 				/>
 				<Button
 					type="submit"
-					className="mt-6 h4-semibold bg-eerieBlue dark:bg-orange-500 w-full text-white"
+					className="h4-semibold bg-eerieBlue mt-6 w-full text-white dark:bg-orange-500"
 					disabled={isLoading}
 					// onClick={handleClick}
 				>

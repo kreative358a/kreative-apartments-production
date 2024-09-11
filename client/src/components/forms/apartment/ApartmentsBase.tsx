@@ -4,11 +4,9 @@ import { useUserProfile } from "@/hooks/useUseProfile";
 
 import React, { useRef } from "react";
 
-export function getApartmentsBase() {
+export function useGetApartmentsBase() {
 	const { profile, isLoading, isError } = useUserProfile();
-	const getbaseapartments: string = profile?.apartments_base.toString() || ""
+	const getbaseapartments: string = profile?.apartments_base.toString() || "";
 
-	return getbaseapartments
+	return getbaseapartments;
 }
-
-

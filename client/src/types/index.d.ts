@@ -223,10 +223,6 @@ export interface IssueResponse {
 	issue: Issue;
 }
 
-export interface MyIssueResponse {
-	myissue: MyIssue;
-}
-
 export interface UpdateIssueResponse {
 	issue: {
 		title: string;
@@ -414,6 +410,7 @@ export interface Profile {
 	average_rating: number;
 	apartments_base_profile: string;
 	apartments_base: string;
+	apartment_profile;
 	apartment: {
 		[x: string]: string | number;
 		id: string;

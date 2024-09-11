@@ -26,7 +26,7 @@ const customStyles = {
 		backgroundColor: state.isSelected
 			? "var(--select-option-selected-background-color)"
 			: "var(--select-option-background-color)",
-		color: "var(--select-option-text-color)",
+		color: "var(--select-option-selected-text-color)",
 		"&:hover": {
 			backgroundColor: "var(--select-option-hover-background-color)",
 			color: "var(--select-option-hover-text-color)",
@@ -65,7 +65,7 @@ const customStyles = {
 		backgroundColor: "transparent",
 		"&:hover": {
 			background: "var(--select-menu-hover-background-color)",
-			//backgroundColor: "var(--select-menu-background-color-transparent)",
+			// backgroundColor: "var(--select-menu-background-color-transparent)",
 			
 			backgroundColor: "transparent",
 			// background: "rgba(120, 120, 160, 0.6)",

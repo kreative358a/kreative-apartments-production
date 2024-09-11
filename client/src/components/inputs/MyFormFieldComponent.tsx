@@ -67,7 +67,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 				<Textarea
 					{...register(name, { required })}
 					placeholder={placeholder}
-					className={`font-semibold dark:font-medium hover:bg-slate-50/60 focus:bg-slate-50/80 dark:hover:bg-slate-800/60 dark:focus:bg-slate-800/80 text-blue-900 dark:text-blue-50 focus:outline-none focus:ring focus:border-blue-800  dark:focus:border-blue-50 bg-slate-50/40 dark:bg-slate-800/40 border-blue-900/60 dark:border-blue-200/60 border-2 ${className}`}
+					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 				/>
 			);
 		} else if (isPassword) {
@@ -75,7 +75,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 				<PasswordInputTooltip
 					{...register(name, { required })}
 					placeholder={placeholder}
-					className={`font-semibold dark:font-medium hover:bg-slate-50/60 focus:bg-slate-50/80 dark:hover:bg-slate-800/60 dark:focus:bg-slate-800/80 text-blue-900 dark:text-blue-50 focus:outline-none focus:ring focus:border-blue-800  dark:focus:border-blue-50 bg-slate-50/40 dark:bg-slate-800/40 border-blue-900/60 dark:border-blue-200/60 border-2 ${className}`}
+					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-none focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 				/>
 			);
 		} else {
@@ -88,7 +88,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 					startIcon={startIcon}
 					endIcon={endIcon}
 					disabled={disabled}
-					className={`font-semibold dark:font-medium hover:bg-slate-50/60 focus:bg-slate-50/80 dark:hover:bg-slate-800/60 dark:focus:bg-slate-800/80 text-blue-900 dark:text-blue-50 focus:outline-none focus:ring focus:border-blue-800  dark:focus:border-blue-50 bg-slate-50/40 dark:bg-slate-800/40 border-blue-900/60 dark:border-blue-200/60 border-2 ${className}`}
+					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 					value={value}
 					readOnly={readOnly}
 					// onChange={onChange}
@@ -102,7 +102,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 			<div className="flex justify-between">
 				<label
 					htmlFor={name}
-					className="h4-semibold text-blue-900 dark:text-blue-50 mt-1 mb-0.5"
+					className="h4-semibold mb-0.5 mt-1 text-blue-900 dark:text-blue-50"
 				>
 					{label}
 				</label>
@@ -117,7 +117,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 			</div>
 			<div className="mb-1 mt-0.5">{renderInputComponent()}</div>
 			{errorMessage && (
-				<p className="min-h-4 max-h-6 font-medium dark:font-normal pl-6 my-0.5 text-sm leading-4 text-red-500">
+				<p className="my-0.5 max-h-6 min-h-4 pl-6 text-sm font-medium leading-4 text-red-500 dark:font-normal">
 					⚠ {errorMessage}
 				</p>
 			)}

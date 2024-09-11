@@ -34,15 +34,15 @@ export default function AuthAvatar() {
 			{profile && (
 				<DropdownMenu>
 					<DropdownMenuTrigger asChild>
-						<Avatar className="border-orange-500 cursor-pointer border-2 hover:scale-110 duration-300 box-shadow">
+						<Avatar className="box-shadow cursor-pointer border-2 border-orange-500 duration-300 hover:scale-110">
 							<AvatarImage alt="auth image" src={profile.avatar} />
 							<AvatarFallback>
-								<CircleUser className="text-blue-900 dark:text-orange-100 size-8 " />
+								<CircleUser className="size-8 text-blue-900 dark:text-orange-100 " />
 							</AvatarFallback>
 						</Avatar>
 					</DropdownMenuTrigger>
 
-					<DropdownMenuContent className="font-semibold dark:font-medium bg-slate-100 dark:bg-slate-800 border-slate-600/60 text-slate-800 dark:text-orange-100 dark:border-slate-400/60 border-4">
+					<DropdownMenuContent className="border-4 border-slate-600/60 bg-slate-100 font-semibold text-slate-800 dark:border-slate-400/60 dark:bg-slate-800 dark:font-medium dark:text-orange-100">
 						<DropdownMenuLabel className="border-b-2">
 							Manage Account
 						</DropdownMenuLabel>

@@ -17,8 +17,8 @@ export default function AddPostPage() {
 				linkText="Back to Home Page"
 				linkHref="/welcome"
 			/>
-			<div className="mt-7 mx-auto sm:w-full max-w-[480px]">
-				<div className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 rounded-lg px-6 py-12 shadow sm:rounded-lg sm:px-12 md:rounded-xl">
+			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
+				<div className="rounded-lg bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-lg sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<CreatePostForm />
 				</div>
 			</div>

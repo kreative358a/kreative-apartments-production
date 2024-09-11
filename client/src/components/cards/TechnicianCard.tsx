@@ -43,7 +43,7 @@ export default function TechnicianCard() {
 	return (
 		<div>
 			<UsersSearch />
-			<h3 className="flex-center font-semibold dark:font-medium text-blue-900 font-robotoSlab dark:text-blue-400 text-3xl md:text-4xl xl:text-5xl">
+			<h3 className="flex-center font-robotoSlab text-3xl font-semibold text-blue-900 md:text-4xl xl:text-5xl dark:font-medium dark:text-blue-400">
 				All Technicians - ({technicians?.results.length})
 			</h3>
 
@@ -51,10 +51,10 @@ export default function TechnicianCard() {
 				{technicians && technicians.results.length > 0 ? (
 					technicians.results.map((technician) => (
 						<Card key={technician.id}
-						className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 dark:border-blue-950 rounded-lg border-2 hover:scale-105 duration-300 box-shadow mx-auto sm:w-full max-w-[480px]">
+						className="box-shadow hover:scale-103 mx-auto rounded-lg border-2 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-blue-950 dark:bg-slate-800/90 dark:hover:bg-slate-800">
 							<CardContent >
 								<CardHeader className="flex-col-center text-center">
-									<Avatar className="border-orange-500 mx-auto w-28 h-32 overflow-hidden rounded-full border-4 object-cover">
+									<Avatar className="mx-auto h-32 w-28 overflow-hidden rounded-full border-4 border-orange-500 object-cover">
 										<AvatarImage
 											// className="rounded-full"
 											alt="User Profile Avatar"
@@ -89,7 +89,7 @@ export default function TechnicianCard() {
 									<Link href={`/add-rating?username=${technician.username}`}>
 										<Button
 											size="sm"
-											className="electricIndigo-gradient text-blue-50 mt-3"
+											className="electricIndigo-gradient mt-3 text-blue-50"
 										>
 											Give me a Rating
 										</Button>

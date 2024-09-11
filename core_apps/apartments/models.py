@@ -203,4 +203,50 @@ class Apartment(TimeStampedModel):
         except Exception as e:
             print(f"203. apartmennts Exception as {e}")              
         
-                 
+try:
+    apartments = Apartment.objects.all()
+    if apartments.count() > 0:
+    # if apartments.count() < 0:        
+        apartments_list = [[f'Building-{a.building}', f'Floor-{a.floor}', f'{a.unit_number}', a.available] for a in apartments]
+        estate_base_dict_object = actual_estate(apartments_list)
+        estate_json_object = json.dumps(estate_base_dict_object, sort_keys=True)                    
+        apartmentbase = ApartmentBase.objects.all()
+        
+        if apartmentbase.count() > 0:
+            apartmentbase = ApartmentBase.objects.all()[0]
+
+            apartmentbase.apartments_base = estate_json_object
+            apartmentbase.save()
+        elif apartmentbase.count() == 0: 
+            ApartmentBase.objects.create(apartments_base=estate_json_object)
+            
+    elif apartments.count() == 0:
+        list_buildings = ["A", "B", "C", "D", "E", "F"]
+        list_floors = [0, 1, 2, 3]
+        list_numbers = ["1", "2", "3", "4"]
+        for b in list_buildings:
+            for fl in list_floors:
+                for n in list_numbers:
+                    Apartment.objects.create(building=b, floor=fl, unit_number=f"{fl}-{n}", apartment_id=f"{b}_{fl}_{fl}-{n}")
+                    time.sleep(0.01)
+        time.sleep(0.1)                            
+        try:
+            apartments = Apartment.objects.all()
+            apartments_list = [[f'Building-{a.building}', f'Floor-{a.floor}', f'{a.unit_number}', a.available] for a in apartments]
+            estate_base_dict_object = actual_estate(apartments_list)
+            estate_json_object = json.dumps(estate_base_dict_object, sort_keys=True)                    
+            apartmentbase = ApartmentBase.objects.all()
+            
+            if apartmentbase.count() > 0:
+                apartmentbase = ApartmentBase.objects.all()[0]
+
+                apartmentbase.apartments_base = estate_json_object
+                apartmentbase.save()
+            else: 
+                ApartmentBase.objects.create(apartments_base=estate_json_object)
+                # print("apartmentbase.apartment_base =", apartmentbase.apartments_base)
+        except Exception as e:
+            print(f"200. apartmennts Exception as {e}")                                  
+            # print("apartmentbase.apartment_base =", apartmentbase.apartments_base)
+except Exception as e:
+    print(f"203. apartmennts Exception as {e}")                     

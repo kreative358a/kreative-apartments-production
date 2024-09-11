@@ -66,14 +66,14 @@ export default function CreateRatingForm() {
 					register={register}
 					errors={errors}
 					startIcon={
-						<UserCog className="text-blue-800 dark:text-blue-50 size-8" />
+						<UserCog className="size-8 text-blue-800 dark:text-blue-50" />
 					}
 					disabled
 					// onChange={undefined}
 				/>
 				<label
 					htmlFor="rating"
-					className="h4-semibold text-blue-950 dark:text-orange-5"
+					className="h4-semibold dark:text-orange-5 text-blue-950"
 				>
 					{" "}
 					Rating{" "}
@@ -88,7 +88,7 @@ export default function CreateRatingForm() {
 							type="number"
 							placeholder="Choose a value of between 1 and 5"
 							onChange={(e) => field.onChange(parseInt(e.target.value))}
-							className="flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+							className="border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:bg-slate-50/80 focus:outline-none focus:ring focus-visible:ring-offset-0  dark:border-blue-200/60 dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80"
 						/>
 					)}
 				/>
@@ -106,7 +106,7 @@ export default function CreateRatingForm() {
 				/>
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-800/80 dark:bg-orange-500/80  hover:bg-blue-800 hover:dark:bg-orange-500 w-full text-blue-50"
+					className="h4-semibold w-full bg-blue-800/80  text-blue-50 hover:bg-blue-800 dark:bg-orange-500/80 hover:dark:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Add Rating`}

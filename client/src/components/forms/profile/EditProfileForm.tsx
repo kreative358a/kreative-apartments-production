@@ -100,7 +100,7 @@ export default function EditProfileForm() {
 					errors={errors}
 					placeholder="Username"
 					startIcon={
-						<UserCheck2 className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<UserCheck2 className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -112,7 +112,7 @@ export default function EditProfileForm() {
 					errors={errors}
 					placeholder="First Name"
 					startIcon={
-						<Contact2Icon className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<Contact2Icon className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -123,7 +123,7 @@ export default function EditProfileForm() {
 					errors={errors}
 					placeholder="Last Name"
 					startIcon={
-						<Contact2Icon className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<Contact2Icon className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -136,7 +136,7 @@ export default function EditProfileForm() {
 					errors={errors}
 					placeholder="What's your country"
 					startIcon={
-						<Map className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<Map className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -148,7 +148,7 @@ export default function EditProfileForm() {
 					errors={errors}
 					placeholder="City"
 					startIcon={
-						<MapPinnedIcon className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<MapPinnedIcon className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -163,7 +163,7 @@ export default function EditProfileForm() {
 					// onChange={undefined}
 				/>
 				<Label
-					className="h4-semibold text-blue-900 dark:text-babyPowder"
+					className="h4-semibold dark:text-babyPowder text-blue-900"
 					htmlFor="avatar"
 				>
 					Avatar
@@ -172,7 +172,7 @@ export default function EditProfileForm() {
 					<div className="grow" style={{ maxWidth: "90%" }}>
 						<Input
 							accept="image/*"
-							className="font-medium dark:font-normal file:bg-blue-950 border-blue-800 dark:border-platinum text-blue-950 dark:text-blue-50 cursor-pointer file:mr-3 file:rounded-md file:text-lime-500"
+							className="dark:border-platinum cursor-pointer border-blue-800 font-medium text-blue-950 file:mr-3 file:rounded-md file:bg-blue-950 file:text-lime-500 dark:font-normal dark:text-blue-50"
 							id="avatar"
 							name="avatar"
 							type="file"
@@ -187,7 +187,7 @@ export default function EditProfileForm() {
 				</div>
 				<Button
 					type="submit"
-					className="h4-semibold bg-eerieBlue/80 hover:bg-eerieBlue/95 dark:bg-orange-500/80 hover:dark:bg-orange-500/95 mt-2 w-full text-white"
+					className="h4-semibold bg-eerieBlue/80 hover:bg-eerieBlue/95 mt-2 w-full text-white dark:bg-orange-500/80 hover:dark:bg-orange-500/95"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Update Profile`}
