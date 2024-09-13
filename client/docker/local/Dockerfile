@@ -1,5 +1,6 @@
 FROM docker.io/node:20.11-alpine3.18 AS base
 
+
 FROM base AS node-build-stage
 
 RUN apk add --no-cache libc6-compat

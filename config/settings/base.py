@@ -9,11 +9,18 @@ from datetime import timedelta
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = BASE_DIR / "core_apps"
 
-local_env_file = path.join(BASE_DIR, ".envs", ".env.local")
+# local_env_file = path.join(BASE_DIR, ".envs", ".env.local")
+prod_env_file = path.join(BASE_DIR, ".envs", ".env.production")
 
-if path.isfile(local_env_file):
-    load_dotenv(local_env_file)
 
+# ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
+# print(ENVIRONMENT)
+# IS_DIGITALOCEAN_APP = "DROPLET" in os.environ
+
+# if path.isfile(local_env_file):
+#     load_dotenv(local_env_file)
+if path.isfile(prod_env_file):
+    load_dotenv(prod_env_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -196,7 +203,6 @@ CELERY_BEAT_SCHEDULE = {
     }
 }
 
-
 CLOUDINARY_CLOUD_NAME = getenv("CLOUDINARY_CLOUD_NAME")
 CLOUDINARY_API_KEY = getenv("CLOUDINARY_API_KEY")
 CLOUDINARY_API_SECRET = getenv("CLOUDINARY_API_SECRET")
@@ -207,15 +213,10 @@ cloudinary.config(
     api_secret=CLOUDINARY_API_SECRET,
 )
 
-
 COOKIE_NAME = "access"
-
 COOKIE_SAMESITE = "Lax"
-
 COOKIE_PATH = "/"
-
 COOKIE_HTTPONLY = True
-
 COOKIE_SECURE = getenv("COOKIE_SECURE", "True") == "True"
 
 REST_FRAMEWORK = {
@@ -238,7 +239,6 @@ REST_FRAMEWORK = {
     },
 }
 
-
 SIMPLE_JWT = {
     "SIGNING_KEY": getenv("SIGNING_KEY"),
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
@@ -248,7 +248,6 @@ SIMPLE_JWT = {
     "USER_ID_CLAIM": "user_id",
 }
 
-
 DJOSER = {
     # https://djoser.readthedocs.io/en/latest/settings.html
     "USER_ID_FIELD": "id",
@@ -256,9 +255,7 @@ DJOSER = {
     "TOKEN_MODEL": None,
     "USER_CREATE_PASSWORD_RETYPE": True,
     "SEND_ACTIVATION_EMAIL": True,
-    # ...
     "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
-    # ...
     "PASSWORD_RESET_CONFIRM_RETYPE": True,
     "ACTIVATION_URL": "activate/{uid}/{token}",
     "PASSWORD_RESET_CONFIRM_URL": "password-reset/{uid}/{token}",
@@ -270,7 +267,6 @@ DJOSER = {
     },
 }
 
-# 44. Google Developers Console
 # https://console.cloud.google.com/apis/credentials/consent/edit?authuser=4&project=kreative-apartments
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv("GOOGLE_CLIENT_ID")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv("GOOGLE_CLIENT_SECRET")
@@ -302,4 +298,6 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
 ]
 
+
+# CSRF_TRUSTED_ORIGINS = ["https://kreative-apartments.pro", "https://www.kreative-apartments.pro"]
 

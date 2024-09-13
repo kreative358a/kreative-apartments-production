@@ -51,7 +51,8 @@ export default function TechnicianCard() {
 				{technicians && technicians.results.length > 0 ? (
 					technicians.results.map((technician) => (
 						<Card key={technician.id}
-						className="box-shadow hover:scale-103 mx-auto rounded-lg border-2 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-blue-950 dark:bg-slate-800/90 dark:hover:bg-slate-800">
+							className="box-shadow hover:scale-103 mx-auto border-2 border-blue-900/60 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-blue-200/60 dark:bg-slate-800/90 dark:hover:bg-slate-800"
+						>
 							<CardContent >
 								<CardHeader className="flex-col-center text-center">
 									<Avatar className="mx-auto h-32 w-28 overflow-hidden rounded-full border-4 border-orange-500 object-cover">
