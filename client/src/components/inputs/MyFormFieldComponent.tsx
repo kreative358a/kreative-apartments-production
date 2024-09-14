@@ -46,7 +46,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 	register,
 	disabled = false,
 	errors,
-	type,
+	// type,
 	placeholder,
 	required = false,
 	startIcon,
@@ -82,7 +82,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 				<Input
 					id={name}
 					{...register(name, { required })}
-					type={type}
+					// type={type}
 					placeholder={placeholder}
 					startIcon={startIcon}
 					endIcon={endIcon}
