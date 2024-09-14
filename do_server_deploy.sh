@@ -1,8 +1,11 @@
 #!/bin/bash
 
 set -e
-
+# shellcheck disable=SC2034
+# DIGITAL_OCEAN_IP_ADDRESS="52.42.141.22"
 if [ -z "$DIGITAL_OCEAN_IP_ADDRESS" ]; then
+# shellcheck disable=SC2157
+# if [ -z "52.42.141.22" ]; then
   echo "Error: DIGITAL_OCEAN_IP_ADDRESS not defined"
   exit 1
 fi
@@ -20,10 +23,10 @@ git archive --format tar --output ./project.tar main
 echo "Uploading project... Please be patient"
 
 rsync -avz --progress ./project.tar root@"$DIGITAL_OCEAN_IP_ADDRESS":/tmp/project.tar
-
 echo "Building and deploying on the server..."
 
-ssh -o StrictHostKeyChecking=no root@"$DIGITAL_OCEAN_IP_ADDRESS" <<'ENDSSH'
+ssh -o StrictHostKeyChecking=no root@$DIGITAL_OCEAN_IP_ADDRESS <<'ENDSSH'
+# ssh -o StrictHostKeyChecking=no root@52.42.141.22 <<'ENDSSH'
 
 set -e
 
