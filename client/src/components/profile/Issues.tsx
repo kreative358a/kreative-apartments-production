@@ -19,7 +19,7 @@ export default function Issues() {
 	}
 	return (
 		<TabsContent value="my-issues">
-			<h2 className="h2-semibold flex-center font-robotoSlab text-blue-950 dark:text-orange-500 text-xl mt-2 lg:max-xl:mt-6">
+			<h2 className="h2-semibold flex-center font-robotoSlab mt-2 text-xl text-blue-950 lg:max-xl:mt-6 dark:text-orange-500">
 				Total: ({myIssue?.count})
 			</h2>
 			<div className="mt-4 grid cursor-pointer grid-cols-1 gap-4 p-1.5 md:grid-cols-2 2xl:grid-cols-3">

@@ -39,8 +39,8 @@ export default function BookmarkedPostCard() {
 	}
 	return (
 		<>
-		<div className="flex mx-auto flex-row justify-between gap-4 items-center">
-			<h1 className="font-robotoSlab font-medium dark:font-normal text-orange-600 dark:text-orange-600 text-[28px] md:text-[32px] xl:text-[36px] 2xl:text-[40px]">
+		<div className="mx-auto flex flex-row items-center justify-between gap-4">
+			<h1 className="font-robotoSlab text-[28px] font-medium text-orange-600 md:text-[32px] xl:text-[36px] 2xl:text-[40px] dark:font-normal dark:text-orange-600">
 				My Bookmarks - ({bookmarks?.results.length})
 			</h1>
 		</div>
@@ -50,21 +50,21 @@ export default function BookmarkedPostCard() {
 						sortedBookmarks.map((bookmarkItem) => (
 							<Card
 								key={bookmarkItem.id}
-								className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 border-indigo-800 dark:border-indigo-800 rounded-lg border hover:scale-105 duration-300 box-shadow mx-auto sm:w-full max-w-[480px]"
+								className="box-shadow mx-auto max-w-[480px] rounded-lg border border-indigo-800 bg-blue-50/90 duration-300 hover:scale-105 hover:bg-blue-50 sm:w-full dark:border-indigo-800 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 							>
-								<CardHeader className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 pb-4">
+								<CardHeader className="pb-4 font-medium text-blue-900 dark:font-normal dark:text-blue-50">
 									<CardTitle className="text-center text-xl">
 										{bookmarkItem.title.length > 25
 											? `${bookmarkItem.title.substring(0, 25)}....`
 											: bookmarkItem.title}
 									</CardTitle>
 									<CardDescription>
-										<div className="flex flex-row justify-between text-md">
+										<div className="text-md flex flex-row justify-between">
 											<div className="font-semibold dark:font-medium">
 												<span className="text-blue-900 dark:text-blue-50">
 													Posted on:{" "}
 												</span>
-												<span className="text-orange-800 dark:text-orange-600 ml-2">
+												<span className="ml-2 text-orange-800 dark:text-orange-600">
 													{formatDate(bookmarkItem.created_at).toString()}
 												</span>
 											</div>
@@ -73,7 +73,7 @@ export default function BookmarkedPostCard() {
 											<span className="text-blue-900 dark:text-blue-50">
 												Last Updated:{" "}
 											</span>
-											<span className="text-orange-700 dark:text-blue-500 ml-2">
+											<span className="ml-2 text-orange-700 dark:text-blue-500">
 												{formatDistanceToNow(
 													parseISO(bookmarkItem.updated_at),
 													{
@@ -86,8 +86,8 @@ export default function BookmarkedPostCard() {
 									</CardDescription>
 								</CardHeader>
 
-								<CardContent className="border-t-deepBlueGrey dark:border-gray border-y py-4 text-md">
-									<p className="font-semibold dark:font-normal rounded-sm text-blue-950 dark:text-blue-50 p-2">
+								<CardContent className="border-t-deepBlueGrey dark:border-gray text-md border-y py-4">
+									<p className="rounded-sm p-2 font-semibold text-blue-950 dark:font-normal dark:text-blue-50">
 										{bookmarkItem.body.length > 65
 											? `${bookmarkItem.body.substring(0, 65)}....`
 											: bookmarkItem.body}
@@ -106,12 +106,12 @@ export default function BookmarkedPostCard() {
 										</Link>
 									</div>
 
-									<div className="flex-row-center font-semibold dark:font-medium text-slate-800 dark:text-blue-50">
+									<div className="flex-row-center font-semibold text-slate-800 dark:font-medium dark:text-blue-50">
 										<EyeIcon className="post-icon text-electricIndigo dark:text-electricIndigo mr-1" />
 										{getViewText(bookmarkItem.view_count)}
 									</div>
 
-									<div className="flex-row-center font-semibold dark:font-medium text-slate-800 dark:text-blue-50">
+									<div className="flex-row-center font-semibold text-slate-800 dark:font-medium dark:text-blue-50">
 										<MessageSquareQuoteIcon className="post-icon text-electricIndigo dark:text-electricIndigo mr-1" />
 										<span>{getRepliesText(bookmarkItem.replies.length)}</span>
 									</div>
@@ -119,7 +119,7 @@ export default function BookmarkedPostCard() {
 							</Card>
 						))
 					) : (
-						<p className="text-lg font-medium dark:font-normal text-green-700 dark:text-lime-500">
+						<p className="text-lg font-medium text-green-700 dark:font-normal dark:text-lime-500">
 							No Bookmarks added Yet!
 						</p>
 					)}

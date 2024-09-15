@@ -70,14 +70,14 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 		}
 	};
 	return (
-		<Card className="border-blue-900/60 dark:border-blue-200/60 border-2 border-dashed">
+		<Card className="border-2 border-dashed border-blue-900/60 dark:border-blue-200/60">
 			<AuthFormHeader
 				title={issue?.title}
 				linkText="Go back to profile"
 				linkHref="/profile"
 			/>
 
-			<CardHeader className="border-b-blue-950 flex flex-row justify-between gap-4 border-b p-4 sm:p-6 md:flex-row md:items-center md:gap-6 ">
+			<CardHeader className="flex flex-row justify-between gap-4 border-b border-b-blue-950 p-4 sm:p-6 md:flex-row md:items-center md:gap-6 ">
 				<div className="grid gap-0.5">
 					<CardTitle className="text-blue-950 dark:text-blue-50">
 						<p className="flex items-center space-x-2">
@@ -85,7 +85,7 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 							<span className="text-lg text-blue-900 dark:text-blue-100">
 								Apartment Building:{" "}
 							</span>
-							<span className="text-lg text-blue-950 dark:text-blue-50 font-semibold">
+							<span className="text-lg font-semibold text-blue-950 dark:text-blue-50">
 								{issue?.apartment_building}
 							</span>
 						</p>
@@ -94,16 +94,16 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 							<span className="text-lg text-blue-900 dark:text-blue-100">
 								Apartment Floor:{" "}
 							</span>
-							<span className="text-lg text-blue-950 dark:text-blue-50 font-semibold">
+							<span className="text-lg font-semibold text-blue-950 dark:text-blue-50">
 								{issue?.apartment_floor}
 							</span>
 						</p>
 						<p className="flex items-center space-x-2">
 							<LayoutGrid className="tab-icon" />
-							<span className="text-lg text-blue-900 dark:text-blue-100 font-semibold">
+							<span className="text-lg font-semibold text-blue-900 dark:text-blue-100">
 								Apartment Number:{" "}
 							</span>
-							<span className="text-lg text-blue-950 dark:text-blue-50 font-semibold">
+							<span className="text-lg font-semibold text-blue-950 dark:text-blue-50">
 								{issue?.apartment_unit}
 							</span>
 						</p>
@@ -126,7 +126,7 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 					{canUpdate && (
 						<Link href={`/issue/update-issue/${id}`}>
 							<Button
-								className="bg-electricIndigo/90 hover:bg-electricIndigo text-blue-50 dark:bg-electricIndigo/90 dark:hover:bg-electricIndigo dark:text-babyPowder ml-auto h-10 max-w-[200px] sm:ml-0 md:max-w-[300px]"
+								className="bg-electricIndigo/90 hover:bg-electricIndigo dark:bg-electricIndigo/90 dark:hover:bg-electricIndigo dark:text-babyPowder ml-auto h-10 max-w-[200px] text-blue-50 sm:ml-0 md:max-w-[300px]"
 								size="sm"
 								variant="outline"
 							>
@@ -138,7 +138,7 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 					{canDelete && (
 						<Button
 							onClick={handleDeleteIssue}
-							className="text-blue-50 dark:text-blue-50 ml-auto h-10 max-w-[200px] bg-red-500 sm:ml-0 md:max-w-[300px] dark:bg-red-500"
+							className="ml-auto h-10 max-w-[200px] bg-red-500 text-blue-50 sm:ml-0 md:max-w-[300px] dark:bg-red-500 dark:text-blue-50"
 							size="sm"
 							variant="outline"
 						>
@@ -159,22 +159,22 @@ export default function IssueDetails({ params }: IssueDetailsProps) {
 				</CardDescription>
 			</CardContent>
 
-			<CardFooter className="mt-2 flex flex-row justify-between text-blue-950 dark:text-lime-500 font-medium">
+			<CardFooter className="mt-2 flex flex-row justify-between font-medium text-blue-950 dark:text-lime-500">
 				<p className="text-base">
 					assigned to:
-					<span className="text-blue-950 dark:text-blue-50 ml-2">
+					<span className="ml-2 text-blue-950 dark:text-blue-50">
 						{issue?.assigned_to || "Not assigned Yet!"}
 					</span>
 				</p>
 				<p className="text-base">
 					Status:
-					<span className="text-blue-950 dark:text-blue-50 ml-2">
+					<span className="ml-2 text-blue-950 dark:text-blue-50">
 						{issue?.status}
 					</span>
 				</p>
 				<p className="text-base">
 					Priority:
-					<span className="text-blue-950 dark:text-blue-50 ml-2">
+					<span className="ml-2 text-blue-950 dark:text-blue-50">
 						{issue?.priority}
 					</span>
 				</p>

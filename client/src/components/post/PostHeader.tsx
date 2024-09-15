@@ -36,7 +36,7 @@ export default function PostHeader({
 									: "/assets/icons/user-profile-light-circle.svg")
 							}
 							alt="Author Avatar"
-							className="border-orange-500 dark:border-orange-500 size-8 rounded-full border-2 sm:size-10"
+							className="size-8 rounded-full border-2 border-orange-500 sm:size-10 dark:border-orange-500"
 						/>
 					</Avatar>
 					<span className="text-2xl">@{author_username}</span>
@@ -45,15 +45,15 @@ export default function PostHeader({
 
 			<CardDescription className="mt-2">
 				<p className="flex items-center space-x-2 sm:flex-row">
-					<ClockIcon className="tab-icon text-electricIndigo dark:text-orange-500 hidden sm:block" />
-					<span className="text-xl text-blue-900 dark:text-blue-50 mr-4">
+					<ClockIcon className="tab-icon text-electricIndigo hidden sm:block dark:text-orange-500" />
+					<span className="mr-4 text-xl text-blue-900 dark:text-blue-50">
 						<span className="mr-1 font-semibold dark:font-medium">Posted</span>
 						{created_at
 							? formatDistanceToNow(parseISO(created_at), { addSuffix: true })
 							: "Loading..."}
 					</span>
-					<EyeIcon className="tab-icon text-electricIndigo dark:text-orange-500 ml-4" />
-					<span className="text-blue-900 dark:text-blue-50 font-semibold dark:font-medium text-xl" >
+					<EyeIcon className="tab-icon text-electricIndigo ml-4 dark:text-orange-500" />
+					<span className="text-xl font-semibold text-blue-900 dark:font-medium dark:text-blue-50" >
 						{getViewText(view_count)}
 					</span>
 				</p>

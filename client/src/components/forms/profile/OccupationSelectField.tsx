@@ -4,12 +4,11 @@ import { TProfileSchema } from "@/lib/validationSchemas";
 import { Occupation } from "@/types";
 import { Briefcase } from "lucide-react";
 import dynamic from "next/dynamic";
-import React, { useEffect } from "react";
+import React, { useEffect, FC, useCallback, useState } from "react";
 import { Control, Controller, UseFormSetValue } from "react-hook-form";
 import Select from "react-select";
 import customStyles from "../selectStyles";
-import { FC, useCallback, useState } from "react";
-//import { MbscSelectChangeEvent, Select, setOptions } from '@mobiscroll/react';
+// import { MbscSelectChangeEvent, Select, setOptions } from '@mobiscroll/react';
 
 const ClientOnly = dynamic<{ children: React.ReactNode }>(
 	() => Promise.resolve(({ children }) => <>{children}</>),
@@ -57,12 +56,12 @@ export default function OccupationSelectField({
 		<div>
 			<label
 				htmlFor="occupation"
-				className="h4-semibold text-blue-900 dark:text-babyPowder"
+				className="h4-semibold dark:text-babyPowder text-blue-900"
 			>
 				Occupation
 			</label>
-			<div className="mt-1 flex items-center w-full gap-2">
-				<Briefcase className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+			<div className="mt-1 flex w-full items-center gap-2">
+				<Briefcase className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 				<ClientOnly>
 					<Controller
 						control={control}

@@ -36,10 +36,10 @@ export default function TechnicianCardDetails({
 						return (
 							<span key={index}>
 								{average_rating >= index + 1 ? (
-									<Star className="text-blue-500 fill-current" />
+									<Star className="fill-current text-blue-500" />
 								) : average_rating >= ratingValue ? (
 									<Star
-										className="text-blue-500 fill-current"
+										className="fill-current text-blue-500"
 										fillOpacity={0.5}
 									/>
 								) : (

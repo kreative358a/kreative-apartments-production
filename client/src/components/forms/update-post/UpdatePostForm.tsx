@@ -70,7 +70,7 @@ export default function UpdatePostForm({ params }: UpdateParamsProps) {
 					register={register}
 					errors={errors}
 					startIcon={
-						<Text className="text-slate-800 dark:text-orange-200 size-8" />
+						<Text className="size-8 text-slate-800 dark:text-orange-200" />
 					}
 				/>
 
@@ -84,7 +84,7 @@ export default function UpdatePostForm({ params }: UpdateParamsProps) {
 
 				<Button
 					type="submit"
-					className="h4-semibold bg-slate-700/80 hover:bg-slate-700 dark:bg-orange-500/80 dark:hover:bg-orange-500 w-full text-blue-50 dark:text-blue-50 mt-6"
+					className="h4-semibold mt-6 w-full bg-slate-700/80 text-blue-50 hover:bg-slate-700 dark:bg-orange-500/80 dark:text-blue-50 dark:hover:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Update Your Post`}

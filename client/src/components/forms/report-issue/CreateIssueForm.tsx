@@ -82,7 +82,7 @@ export default function CreateIssueForm() {
 					errors={errors}
 					placeholder="Issue Title"
 					startIcon={
-						<FlagIcon className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<FlagIcon className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -94,7 +94,7 @@ export default function CreateIssueForm() {
 					placeholder="Detailed Description of the issue"
 					isTextArea
 					startIcon={
-						<FlagIcon className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 size-8" />
+						<FlagIcon className="size-8 font-medium text-blue-900 dark:font-normal dark:text-blue-50" />
 					}
 					// onChange={undefined}
 				/>
@@ -128,7 +128,7 @@ export default function CreateIssueForm() {
 						</ClientOnly>
 					</div>
 					{errors.status && (
-						<p className="min-h-4 max-h-6 font-medium dark:font-normal pl-6 my-0.5 text-sm leading-4 text-red-500">
+						<p className="my-0.5 max-h-6 min-h-4 pl-6 text-sm font-medium leading-4 text-red-500 dark:font-normal">
 						⚠ {errors.status.message}
 						</p>
 					)}
@@ -164,14 +164,14 @@ export default function CreateIssueForm() {
 						</ClientOnly>
 					</div>
 					{errors.priority && (
-						<p className="min-h-4 max-h-6 font-medium dark:font-normal pl-6 my-0.5 text-sm leading-4 text-red-500">
+						<p className="my-0.5 max-h-6 min-h-4 pl-6 text-sm font-medium leading-4 text-red-500 dark:font-normal">
 						⚠ {errors.priority.message}
 						</p>
 					)}
 				</div>
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-900/80 hoverbg-blue-900/80 dark:bg-orange-500/80 dark:hover:bg-orange-500 mt-6 w-full text-white"
+					className="h4-semibold hoverbg-blue-900/80 mt-6 w-full bg-blue-900/80 text-white dark:bg-orange-500/80 dark:hover:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Report`}

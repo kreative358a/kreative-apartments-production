@@ -14,7 +14,7 @@ export default function NotFound() {
 					priority
 				/>
 				<div className="mx-auto max-w-md text-center">
-					<h1 className="text-blue-50 text-4xl font-bold tracking-tight sm:text-5xl">
+					<h1 className="text-4xl font-bold tracking-tight text-blue-50 sm:text-5xl">
 						Page not found
 					</h1>
 					<p className="mt-6 text-xl leading-7 text-white sm:text-2xl">

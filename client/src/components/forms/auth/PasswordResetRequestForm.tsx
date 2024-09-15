@@ -57,12 +57,12 @@ export default function PasswordResetRequestForm() {
 					errors={errors}
 					placeholder="Email Address"
 					startIcon={
-						<MailIcon className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<MailIcon className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 				<Button
 					type="submit"
-					className="mt-6 h4-semibold bg-eerieBlue dark:bg-orange-500 w-full text-white"
+					className="h4-semibold bg-eerieBlue mt-6 w-full text-white dark:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Request Password Reset`}

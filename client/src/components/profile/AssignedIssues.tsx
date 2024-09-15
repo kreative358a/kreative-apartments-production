@@ -21,7 +21,7 @@ export default function AssignedIssues() {
 
 	return (
 		<TabsContent value="assigned-issues">
-			<h2 className="h3-semibold md:h2-semibold flex-center font-robotoSlab text-blue-950 dark:text-orange-500 text-xl">
+			<h2 className="h3-semibold md:h2-semibold flex-center font-robotoSlab text-xl text-blue-950 dark:text-orange-500">
 				Total: ({myAssignedIssues?.count})
 			</h2>
 			<div className="mt-4 grid cursor-pointer grid-cols-1 gap-4 p-1.5 md:grid-cols-2 2xl:grid-cols-3">

@@ -16,10 +16,10 @@ export default function PostBody({ body, slug }: PostBodyProps) {
 	const canUpdate =
 		data?.post.author_username === currentUser?.profile.username;
 	return (
-		<CardContent className="border-b-slate-800 dark:border-slate-500 border-b border-dashed">
+		<CardContent className="border-b border-dashed border-b-slate-800 dark:border-slate-500">
 			<CardDescription className="mt-3">
 				<div className="flex items-center space-x-2">
-					<span className="text-base font-semibold dark:font-medium text-slate-800 dark:text-blue-50">
+					<span className="text-base font-semibold text-slate-800 dark:font-medium dark:text-blue-50">
 						{body}
 					</span>
 				</div>

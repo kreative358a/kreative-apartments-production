@@ -1,4 +1,4 @@
-// 113. Use Social Auth Hook
+// Use Social Auth Hook
 // Tworzymy hak, który pomoże nam uprościć obsługę naszych wywołań zwrotnych OAuth poprzez wyodrębnienie niezbędnych parametrów z adresu URL, a parametrami, o których mowa, są stan i kod
 
 import { setAuth } from "@/lib/redux/features/auth/authSlice";

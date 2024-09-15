@@ -3,7 +3,7 @@ import PasswordResetConfirmForm from "@/components/forms/auth/PasswordResetConfi
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Alpha Apartments | Password Reset Request",
+	title: "Kreative Apartments | Password Reset Request",
 	description: "Password request reset page",
 };
 
@@ -11,7 +11,7 @@ export default function ForgotPassword() {
 	return (
 		<div>
 			<AuthFormHeader title="Create your New Password" />
-			<div className="mt-7 mx-auto sm:w-full max-w-[480px]">
+			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
 				<div className="bg-lightGrey/80 hover:bg-lightGrey/95 dark:bg-deepBlueGrey/80 dark:hover:bg-deepBlueGrey/95 px-6 py-12 shadow sm:rounded-lg sm:px-12 md:rounded-xl">
 					<PasswordResetConfirmForm />
 				</div>

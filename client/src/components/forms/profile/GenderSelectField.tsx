@@ -63,12 +63,12 @@ export default function GenderSelectField({
 		<div>
 			<label
 				htmlFor="gender"
-				className="h4-semibold text-blue-900 dark:text-babyPowder"
+				className="h4-semibold dark:text-babyPowder text-blue-900"
 			>
 				Gender
 			</label>
-			<div className="mt-1 flex items-center w-full gap-2">
-				<UserSearch className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+			<div className="mt-1 flex w-full items-center gap-2">
+				<UserSearch className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 				<ClientOnly>
 					<Controller
 						control={control}

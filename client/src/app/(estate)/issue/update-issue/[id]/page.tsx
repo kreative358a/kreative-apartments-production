@@ -25,7 +25,7 @@ export default function UpdateIssuePage({ params }: UpdateParamsProps) {
 				linkText="Back to Profile"
 				linkHref="/profile"
 			/>
-			<div className="mt-7 mx-auto sm:w-full max-w-[480px]">
+			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
 				<div className="bg-lightGrey/80 hover:bg-lightGrey/80 dark:bg-deepBlueGrey/80 dark:hover:bg-deepBlueGrey rounded-lg px-6 py-12 shadow sm:rounded-lg sm:px-12 md:rounded-xl">
 					<UpdateIssueForm params={params} />
 				</div>

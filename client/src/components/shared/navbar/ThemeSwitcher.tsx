@@ -26,13 +26,13 @@ export default function ThemeSwitcher() {
 			>
 				<Button size="icon">
 					<SunIcon
-						className={`size-[1.8rem] rotate-0 scale-100 hover-scale-110 transition-all dark:-rotate-90 dark:scale-0 dark:hover:scale-0  ${
+						className={`hover-scale-110 size-[1.8rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 dark:hover:scale-0  ${
 							theme === "light" ? "text-orange-300" : "text-orange-700"
 						}`}
 						suppressHydrationWarning
 					/>
 					<MoonIcon
-						className={`absolute size-[1.8rem] rotate-90 scale-0 hover:scale-0 transition-all dark:rotate-0 dark:scale-100 dark:hover:scale-110 ${
+						className={`absolute size-[1.8rem] rotate-90 scale-0 transition-all hover:scale-0 dark:rotate-0 dark:scale-100 dark:hover:scale-110 ${
 							theme === "light" ? "text-blue-500" : "text-slate-300"
 						}`}
 						suppressHydrationWarning
@@ -42,13 +42,13 @@ export default function ThemeSwitcher() {
 			</DropdownMenuTrigger>
 			<DropdownMenuContent
 				align="end"
-				className="bg-babyPowder dark:bg-slate-800 cursor-pointer rounded-md p-2 outline-none  hover:ring border-blue-900 hover:border-blue-700 dark:border-blue-200 hover:focus:border-blue-50 border-2"
+				className="bg-babyPowder cursor-pointer rounded-md border-2 border-blue-900 p-2  outline-none hover:border-blue-700 hover:ring hover:focus:border-blue-50 dark:border-blue-200 dark:bg-slate-800"
 			>
 				{themeOptions.map(({ value, label }) => (
 					<DropdownMenuItem
 						key={value}
 						onClick={() => setTheme(value)}
-						className={`font-medium dark:font-normal hover:bg-blue-300 dark:hover:bg-gray cursor-pointer ${theme === "light" && value === "light" ? "text-orange-500" : theme === "dark" && value === "dark" ? "text-blue-400" : theme === "light" ? "text-indigo-950 hover:text-babyPowder" : "text-babyPowder"}`}
+						className={`dark:hover:bg-gray cursor-pointer font-medium hover:bg-blue-300 dark:font-normal ${theme === "light" && value === "light" ? "text-orange-500" : theme === "dark" && value === "dark" ? "text-blue-400" : theme === "light" ? "hover:text-babyPowder text-indigo-950" : "text-babyPowder"}`}
 					>
 						{label}
 					</DropdownMenuItem>

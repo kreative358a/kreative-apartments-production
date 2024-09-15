@@ -3,7 +3,7 @@ import { AuthFormHeader } from "@/components/forms/auth";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Alpha Apartments | Add Rating",
+	title: "Kreative Apartments | Add Rating",
 	description:
 		"Tenants can rate the technicians, if they are satisfied or dissatisfied with the services rendered to them",
 };
@@ -17,8 +17,8 @@ export default function AddRatingPage() {
 				linkText="Back to Technicians Page"
 				linkHref="/technicians"
 			/>
-			<div className="mt-7 mx-auto sm:w-full max-w-[480px]">
-				<div className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 rounded-lg px-6 py-12 shadow sm:rounded-lg sm:px-12 md:rounded-xl">
+			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
+				<div className="rounded-lg bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-lg sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<CreateRatingForm />
 				</div>
 			</div>

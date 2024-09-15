@@ -26,7 +26,7 @@ export default function Reports() {
 	}
 	return (
 		<TabsContent value="my-reports">
-			<h2 className="h2-semibold flex-center font-robotoSlab text-blue-900 dark:text-orange-500 text-xl">
+			<h2 className="h2-semibold flex-center font-robotoSlab text-xl text-blue-900 dark:text-orange-500">
 				Total: ({myReport?.count})
 			</h2>
 			<div className="mt-4 grid cursor-pointer grid-cols-1 gap-4 p-1.5 md:grid-cols-2 2xl:grid-cols-3">
@@ -34,25 +34,25 @@ export default function Reports() {
 					myReport.results.map((report) => (
 						<Card
 							key={report.id}
-							className="border-orange-500/60 hover:border-orange-500 dark:border-gray hover:dark:border-platinum rounded-lg border border-dashed"
+							className="dark:border-gray hover:dark:border-platinum rounded-lg border border-dashed border-orange-500/60 hover:border-orange-500"
 						>
 							<CardHeader>
-								<CardTitle className="flex-center h3-semibold font-robotoSlab text-lime-900 dark:text-lime-500 h-10">
+								<CardTitle className="flex-center h3-semibold font-robotoSlab h-10 text-lime-900 dark:text-lime-500">
 									{report.title}
 								</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<CardDescription className="text-blue-950 bg-lime-100 dark:text-lime-100 dark:bg-deepBlueGrey p-2 h-30 rounded-sm">
+								<CardDescription className="dark:bg-deepBlueGrey h-30 rounded-sm bg-lime-100 p-2 text-blue-950 dark:text-lime-100">
 									<p className="h4-semibold">{report.description}</p>
 								</CardDescription>
 							</CardContent>
 
 							<CardFooter className="dark:yellow-50 flex flex-row justify-between">
 								<p>
-									<span className="text-blue-950 dark:text-orange-500 mr-1 font-bold">
+									<span className="mr-1 font-bold text-blue-950 dark:text-orange-500">
 										Created On:{" "}
 									</span>
-									<Badge className="bg-blue-900 text-blue-50 dark:bg-electricIndigo dark:text-babyPowder">
+									<Badge className="dark:bg-electricIndigo dark:text-babyPowder bg-blue-900 text-blue-50">
 										{formatDate(report.created_at).toString()}
 									</Badge>
 								</p>

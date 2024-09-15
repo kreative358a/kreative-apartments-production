@@ -68,7 +68,7 @@ export default function RegisterForm() {
 					errors={errors}
 					placeholder="Username"
 					startIcon={
-						<UserCheck2 className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<UserCheck2 className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -79,7 +79,7 @@ export default function RegisterForm() {
 					errors={errors}
 					placeholder="First Name"
 					startIcon={
-						<Contact2Icon className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Contact2Icon className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -90,7 +90,7 @@ export default function RegisterForm() {
 					errors={errors}
 					placeholder="Last Name"
 					startIcon={
-						<Contact2Icon className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<Contact2Icon className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -101,7 +101,7 @@ export default function RegisterForm() {
 					errors={errors}
 					placeholder="Email Address"
 					startIcon={
-						<MailIcon className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<MailIcon className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 				/>
 
@@ -125,7 +125,7 @@ export default function RegisterForm() {
 
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-950/80 dark:bg-orange-500/80 w-full text-white hover:bg-blue-950/95 dark:hover:bg-orange-500/95"
+					className="h4-semibold w-full bg-blue-950/80 text-white hover:bg-blue-950/95 dark:bg-orange-500/80 dark:hover:bg-orange-500/95"
 					// przycisk będzie miał stan wyłączony i będzie się zmieniał w zależności od stanu ładowania
 					disabled={isLoading}
 				>

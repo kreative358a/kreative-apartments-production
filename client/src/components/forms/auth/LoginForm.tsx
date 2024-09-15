@@ -60,7 +60,7 @@ export default function LoginForm() {
 					errors={errors}
 					placeholder="Email Address"
 					startIcon={
-						<MailIcon className="font-medium dark:font-normal text-blue-800 dark:text-blue-50 size-8" />
+						<MailIcon className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
 					}
 					// className="font-medium dark:font-normal text-blue-900 dark:text-blue-50 focus:outline-none focus:ring border-blue-900 focus:border-blue-800 dark:border-blue-200 dark:focus:border-blue-50 border-2"
 				/>
@@ -77,7 +77,7 @@ export default function LoginForm() {
 				/>
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-950/80 hover:bg-blue-950/95 dark:bg-orange-500/80 dark:hover:bg-orange-500/95 w-full text-blue-50"
+					className="h4-semibold w-full bg-blue-950/80 text-blue-50 hover:bg-blue-950/95 dark:bg-orange-500/80 dark:hover:bg-orange-500/95"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Sign In`}

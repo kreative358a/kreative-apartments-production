@@ -36,7 +36,7 @@ export default function IssueCard({ issue }: IssueCardProps) {
 		<Link href={`/issue/${issue.id}`} key={issue.id}>
 			<Card
 				key={issue.id}
-				className="bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 border-orange-500/80 hover:border-orange-500 dark:border-gray hover:dark:border-platinum rounded-lg border border-dashed hover:scale-105 duration-300 box-shadow"
+				className="dark:border-gray hover:dark:border-platinum box-shadow rounded-lg border border-dashed border-orange-500/80 bg-blue-50/90 duration-300 hover:scale-105 hover:border-orange-500 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 			>
 				<CardHeader>
 					<CardTitle className="flex-center h3-semibold font-robotoSlab text-lime-700 dark:text-lime-500">
@@ -66,7 +66,7 @@ export default function IssueCard({ issue }: IssueCardProps) {
 							<span className="tab-font">Apartment Floor: </span>
 							<span className="text-lg">{issue.apartment_floor}</span>
 						</p>
-						<p className="flex items-center space-x-2 mt-2">
+						<p className="mt-2 flex items-center space-x-2">
 							<LayoutGrid className="tab-icon" />
 							<span className="tab-font">Apartment Number: </span>
 							<span className="text-lg">{issue.apartment_unit}</span>
@@ -77,14 +77,14 @@ export default function IssueCard({ issue }: IssueCardProps) {
 				<CardFooter className="dark:text-babyPowder flex flex-row justify-between">
 					<p>
 						<p className="mr-0.5 font-bold">Status: </p>
-						<Badge className="bg-blue-950 text-babyPowder dark:bg-electricIndigo dark:text-babyPowder">
+						<Badge className="text-babyPowder dark:bg-electricIndigo dark:text-babyPowder bg-blue-950">
 							{issue.status}
 						</Badge>
 					</p>
 
 					<p>
 						<p className="mr-0.5 font-bold">Priority: </p>
-						<Badge className="bg-blue-900/80 hover:bg-blue-900  text-babyPowder dark:text-blue-950 dark:bg-lime-500">
+						<Badge className="text-babyPowder bg-blue-900/80  hover:bg-blue-900 dark:bg-lime-500 dark:text-blue-950">
 							{issue.priority}
 						</Badge>
 					</p>

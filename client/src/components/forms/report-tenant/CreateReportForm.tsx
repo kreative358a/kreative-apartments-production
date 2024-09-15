@@ -56,7 +56,7 @@ export default function CreateReportForm() {
 					errors={errors}
 					placeholder="Title"
 					startIcon={
-						<FlagIcon className="text-blue-900 dark:text-blue-100 size-8" />
+						<FlagIcon className="size-8 text-blue-900 dark:text-blue-100" />
 					}
 					// onChange={undefined}
 				/>
@@ -68,7 +68,7 @@ export default function CreateReportForm() {
 					errors={errors}
 					placeholder="Add Tenants Username"
 					startIcon={
-						<Contact2Icon className="text-blue-900 dark:text-blue-100 size-8" />
+						<Contact2Icon className="size-8 text-blue-900 dark:text-blue-100" />
 					}
 					// onChange={undefined}
 				/>
@@ -85,7 +85,7 @@ export default function CreateReportForm() {
 
 				<Button
 					type="submit"
-					className="h4-semibold bg-blue-900/80 hover:bg-blue-900 dark:bg-orange-500/80 dark:hover:bg-orange-500 mt-2 w-full text-blue-50/80 hover:text-blue-50"
+					className="h4-semibold mt-2 w-full bg-blue-900/80 text-blue-50/80 hover:bg-blue-900 hover:text-blue-50 dark:bg-orange-500/80 dark:hover:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Send Report`}

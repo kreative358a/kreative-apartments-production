@@ -11,7 +11,7 @@ function HeaderContent() {
 	const profile = data?.profile;
 	return (
 		<div className="flex flex-col gap-2">
-			<Avatar className="border-orange-500 mx-auto size-32 overflow-hidden rounded-full border-4 object-cover">
+			<Avatar className="mx-auto size-32 overflow-hidden rounded-full border-4 border-orange-500 object-cover">
 				<AvatarImage
 					src={
 						profile?.avatar ||
@@ -25,10 +25,10 @@ function HeaderContent() {
 				/>
 			</Avatar>
 			<div className="flex flex-col items-center justify-center space-y-3">
-				<h1 className="font-robotoSlab text-indigo-900 dark:text-blue-50 text-2xl sm:max-lg:text-3xl lg:text-4xl">
+				<h1 className="font-robotoSlab text-2xl text-indigo-900 sm:max-lg:text-3xl lg:text-4xl dark:text-blue-50">
 					{profile?.full_name}
 				</h1>
-				<p className="dark:text-lime-500 text-lg lg:text-xl">@{profile?.username}</p>
+				<p className="text-lg lg:text-xl dark:text-lime-500">@{profile?.username}</p>
 			</div>
 		</div>
 	);

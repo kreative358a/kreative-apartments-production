@@ -21,44 +21,44 @@ export const metadata: Metadata = {
 function ProfilePageContent() {
 	return (
 		<>
-			<div className="mx-auto grid items-start gap-4 px-4 pb-4 md:gap-6 md:px-6 max-sm:mx-0 sm:w-full">
+			<div className="mx-auto grid items-start gap-4 px-4 pb-4 max-sm:mx-0 sm:w-full md:gap-6 md:px-6">
 				<Header />
 
 				{/* the tabs */}
-				<div className="mx-auto sm:w-full rounded-lg bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800">
+				<div className="mx-auto rounded-lg bg-blue-50/90 hover:bg-blue-50 sm:w-full dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<Tabs
-						className="mx-auto flex border-blue-600 dark:border-blue-800 rounded-lg border-2 flex-wrap"
+						className="mx-auto flex flex-wrap rounded-lg border-2 border-blue-600 dark:border-blue-800"
 						defaultValue="about"
 					>
-						<div className="mb-1 mx-auto sm:w-full max-sm:max-w-[480px]">
-						<TabsList className="mx-auto bg-baby_rich flex flex-wrap space-x-4 mb-1 h-auto">
+						<div className="mx-auto mb-1 max-sm:max-w-[480px] sm:w-full">
+						<TabsList className="bg-baby_rich mx-auto mb-1 flex h-auto flex-wrap space-x-4">
 							<TabsTrigger
 								value="about"
-								className="h3-semibold h-10 tab rounded-sm border-blue-500 border-2 text-blue-900 dark:text-blue-50 mt-1 mb-1"
+								className="h3-semibold tab my-1 h-10 rounded-sm border-2 border-blue-500 text-blue-900 dark:text-blue-50"
 							>
 								About
 							</TabsTrigger>
 							<TabsTrigger
 								value="posts"
-								className="h3-semibold h-10 tab rounded-sm border-blue-500 border-2 text-blue-900 dark:text-blue-50 mt-1 mb-1"
+								className="h3-semibold tab my-1 h-10 rounded-sm border-2 border-blue-500 text-blue-900 dark:text-blue-50"
 							>
 								Posts
 							</TabsTrigger>
 							<TabsTrigger
 								value="my-issues"
-								className="h3-semibold h-10 tab rounded-sm border-blue-500 border-2 text-blue-900 dark:text-blue-50  mt-1 mb-1"
+								className="h3-semibold tab my-1 h-10 rounded-sm border-2 border-blue-500 text-blue-900  dark:text-blue-50"
 							>
 								My Issues
 							</TabsTrigger>
 							<TabsTrigger
 								value="my-reports"
-								className="h3-semibold h-10 tab rounded-sm border-blue-500 border-2 text-blue-900 dark:text-blue-50  mt-1 mb-1"
+								className="h3-semibold tab my-1 h-10 rounded-sm border-2 border-blue-500 text-blue-900  dark:text-blue-50"
 							>
 								My Reports
 							</TabsTrigger>
 							<TabsTrigger
 								value="assigned-issues"
-								className="h3-semibold h-10 tab rounded-sm border-blue-500 border-2 text-blue-900 dark:text-blue-50 mt-1 mb-1"
+								className="h3-semibold tab my-1 h-10 rounded-sm border-2 border-blue-500 text-blue-900 dark:text-blue-50"
 							>
 								Assigned Issues
 							</TabsTrigger>
@@ -83,14 +83,14 @@ function ProfilePageContent() {
 					</Tabs>
 				</div>
 			</div>
-			<div className="items-center justify-center flex flex-wrap mx-auto space-x-4 mt-2 mb-2 w-4/5">
+			<div className="mx-auto my-2 flex w-4/5 flex-wrap items-center justify-center space-x-4">
 				<Link href="/profile/edit">
-					<Button className="mr-4 ml-4 h3-semibold max-md:justify-self-center electricIndigo-gradient text-babyPowder w-64 rounded-lg mt-2">
+					<Button className="h3-semibold electricIndigo-gradient text-babyPowder mx-4 mt-2 w-64 rounded-lg max-md:justify-self-center">
 						Update Profile
 					</Button>
 				</Link>
 				<Link href="/apartment">
-					<Button className="mr-4 ml-4 h3-semibold max-md:justify-self-center electricIndigo-gradient text-babyPowder w-64 rounded-lg mt-2">
+					<Button className="h3-semibold electricIndigo-gradient text-babyPowder mx-4 mt-2 w-64 rounded-lg max-md:justify-self-center">
 						Add Your Apartment
 					</Button>
 				</Link>

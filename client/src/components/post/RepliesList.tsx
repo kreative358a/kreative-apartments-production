@@ -21,7 +21,7 @@ export default function RepliesList({ reply }: ReplyProps) {
 							: "/assets/icons/user-profile-light-circle.svg")
 					}
 					alt="Author Avatar"
-					className="border-orange-500 dark:border-orange-500 rounded-full border-2"
+					className="rounded-full border-2 border-orange-500 dark:border-orange-500"
 					width={35}
 					height={35}
 				/>
@@ -37,7 +37,7 @@ export default function RepliesList({ reply }: ReplyProps) {
 						})}
 					</span>
 				</p>
-				<p className="dark:text-blue-50 text-lg">{reply.body}</p>
+				<p className="text-lg dark:text-blue-50">{reply.body}</p>
 			</div>
 		</div>
 	);

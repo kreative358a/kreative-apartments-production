@@ -55,13 +55,13 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 	};
 
 	return (
-		<Card className="dark:border-slate-500 border-slate-600 bg-blue-50/90 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 rounded-lg border border-dashed max-w-[720px] mx-auto">
+		<Card className="mx-auto max-w-[720px] rounded-lg border border-dashed border-slate-600 bg-blue-50/90 hover:bg-blue-50 dark:border-slate-500 dark:bg-slate-800/90 dark:hover:bg-slate-800">
 			<AuthFormHeader
 				linkText="Go back to Home"
 				linkHref="/welcome"
 				title={post?.title}
 			/>
-			<CardHeader className="flex-start border-indigo-800 dark:border-indigo-800 rounded-lg border w-full flex-col">
+			<CardHeader className="flex-start w-full flex-col rounded-lg border border-indigo-800 dark:border-indigo-800">
 				<div className="flex w-full flex-col justify-between sm:items-center sm:gap-2">
 					<PostHeader
 						title={post?.title}
@@ -86,7 +86,7 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 			<PostFooter tags={post?.tags} replies_count={post?.replies_count} />
 
 			<div className="ml-4 space-y-4 border-b border-dashed py-4">
-				<span className="font-robotoSlab dark:text-orange-500 flex flex-row items-center text-lg font-semibold">
+				<span className="font-robotoSlab flex flex-row items-center text-lg font-semibold dark:text-orange-500">
 					<MessageCircleMoreIcon className="tab-icon text-electricIndigo mr-2" />
 					<span className="text-blue-900 dark:text-blue-50">
 						{getRepliesText(post?.replies_count)}
@@ -97,14 +97,14 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 						<RepliesList key={reply.id} reply={reply} />
 					))
 				) : (
-					<p className="text-lg font-medium dark:font-normal text-blue-900 dark:text-blue-200">
+					<p className="text-lg font-medium text-blue-900 dark:font-normal dark:text-blue-200">
 						This Post does&apos;t have any replies yet
 					</p>
 				)}
 			</div>
 
-			<CardContent className="border-b-slate-700 dark:border-slate-500 text-slate-800 dark:text-orange-100 border-b border-dashed">
-				<h2 className="h4-semibold text-blue-950 dark:text-orange-200 mt-3">
+			<CardContent className="border-b border-dashed border-b-slate-700 text-slate-800 dark:border-slate-500 dark:text-orange-100">
+				<h2 className="h4-semibold mt-3 text-blue-950 dark:text-orange-200">
 					Add your reply here
 				</h2>
 				<CreateReplyForm slug={post?.slug} />

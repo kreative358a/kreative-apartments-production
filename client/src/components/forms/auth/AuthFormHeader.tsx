@@ -18,15 +18,15 @@ export default function AuthFormHeader({
 	linkText,
 }: FormHeaderProps) {
 	return (
-		<div className="px-4 mx-auto sm:w-full sm:max-w-md sm:px-6 lg:px-8">
+		<div className="mx-auto px-4 sm:w-full sm:max-w-md sm:px-6 lg:px-8">
 			{/* <HomeModernIcon className="mx-auto size-16 text-blue-950 dark:text-lime-500" /> */}
 			<BuildingOffice2Icon className="mx-auto size-16 text-blue-800 dark:text-lime-500" />
-			<h2 className="text-blue-900 h2-bold font-robotoSlab dark:text-orange-500 mt-3 text-center">
+			<h2 className="h2-bold font-robotoSlab mt-3 text-center text-blue-900 dark:text-orange-500">
 				{title}
 			</h2>
 			{/* instrukcja warunkowa */}
 			{(staticText || linkText) && linkHref && (
-				<p className="font-medium dark:font-normal text-blue-950 dark:text-blue-50 mt-4 text-center text-lg">
+				<p className="mt-4 text-center text-lg font-medium text-blue-950 dark:font-normal dark:text-blue-50">
 					{/* instrukcja warunkowa */}
 					{staticText && <span>{staticText}</span>}
 					{/* czy tekst linku istnieje, jeśli tak to renderujemy go */}

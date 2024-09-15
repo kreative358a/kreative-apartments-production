@@ -6,7 +6,6 @@ import {
 	SheetFooter,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-import { leftNavLinks, rightNavLinks } from "@/constants";
 import { useAuthNavigation } from "@/hooks";
 import { HomeModernIcon, BuildingOffice2Icon } from "@heroicons/react/24/solid";
 import Image from "next/image";
@@ -23,8 +22,8 @@ function RightNavContent() {
 	const topPosts = data?.top_posts.results;
 	const { data: tagData } = useGetPopularTagsQuery();
 	return (
-		<section className="flex h-full w-full flex-col justify-between mt-8 right-0 custom-scrollbar overflow-y-auto">
-			<div className="bg-blue-50/60 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90 p-2 rounded-md">
+		<section className="custom-scrollbar right-0 mt-8 flex size-full flex-col justify-between overflow-y-auto">
+			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-800 dark:text-green-500">
 					Top Posts
 				</h3>
@@ -35,14 +34,14 @@ function RightNavContent() {
 							<SheetClose
 								asChild
 								key={post.slug}
-								className={"text-blue-50 dark:text-blue-50/80 text-lg"}
+								className={"text-lg text-blue-50 dark:text-blue-50/80"}
 							>
 								<Link
 									key={post.id}
 									href={`/post/${post.slug}`}
 									className="flex cursor-pointer items-center justify-between gap-7"
 								>
-									<p className="font-semibold dark:font-medium text-base mt-1 mb-1 hover:text-electricIndigo text-blue-950 dark:text-blue-50 dark:hover:text-electricIndigo">
+									<p className="hover:text-electricIndigo dark:hover:text-electricIndigo my-1 text-base font-semibold text-blue-950 dark:font-medium dark:text-blue-50">
 										{post.title.length > 34
 											? `${post.title.substring(0, 34)}...`
 											: post.title}
@@ -60,7 +59,7 @@ function RightNavContent() {
 				</div>
 			</div>
 
-			<div className="bg-blue-50/60 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90 p-2 rounded-md">
+			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-700 dark:text-green-500">
 					Popular Tags
 				</h3>
@@ -74,12 +73,12 @@ function RightNavContent() {
 									className="flex cursor-pointer items-center justify-between gap-7"
 								>
 									<div className="flex items-center gap-2">
-										<span className="font-semibold dark:font-medium text-base text-blue-950 hover:text-electricIndigo dark:text-blue-50 dark:hover:text-electricIndigo">
+										<span className="hover:text-electricIndigo dark:hover:text-electricIndigo text-base font-semibold text-blue-950 dark:font-medium dark:text-blue-50">
 											{tag.name}
 										</span>
 										<span
 											className="
-                                   font-semibold dark:font-medium text-base text-blue-950 dark:text-blue-50"
+                                   text-base font-semibold text-blue-950 dark:font-medium dark:text-blue-50"
 										>
 											({tag.post_count})
 										</span>
@@ -111,15 +110,15 @@ export default function MobileNavbarRight() {
 					className="invert-colors xl:hidden"
 				/>
 			</SheetTrigger>
-			<SheetContent side="right" className="w-[297px] bg-blue-50/60 hover:bg-blue-50/80  shadow-slate-800/40 dark:bg-slate-800/60 dark:hover:bg-slate-800/80 light-border border-l">
-			<div className="right-0 border-none h-full flex flex-col justify-between custom-scrollbar" >
+			<SheetContent side="right" className="light-border w-[297px] border-l  bg-blue-50/60 shadow-slate-800/40 hover:bg-blue-50/80 dark:bg-slate-800/60 dark:hover:bg-slate-800/80">
+			<div className="custom-scrollbar right-0 flex h-full flex-col justify-between border-none" >
 				<Link href="/" className="flex items-center gap-1">
 					<BuildingOffice2Icon className="mr-2 size-11 text-lime-500" />
 					<p className="h2-bold font-robotoSlab text-blue-900 dark:text-blue-200">
 						Kreative <span className="text-lime-500"> Apartments</span>
 					</p>
 				</Link>
-				{/*<RightNavContent />*/}
+				{/* <RightNavContent /> */}
 				
 					<SheetClose asChild>
 						<RightNavContent />

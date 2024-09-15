@@ -64,7 +64,7 @@ export default function CreateReplyForm({ slug }: ReplyFormProps) {
 				/>
 				<Button
 					type="submit"
-					className="h4-semibold text-blue-50 dark:text-blue-50 bg-blue-900/80 hover:bg-blue-900 dark:bg-orange-500/80 dark:hover:bg-orange-500 w-full"
+					className="h4-semibold w-full bg-blue-900/80 text-blue-50 hover:bg-blue-900 dark:bg-orange-500/80 dark:text-blue-50 dark:hover:bg-orange-500"
 					disabled={isLoading}
 				>
 					{isLoading ? <Spinner size="sm" /> : `Add your reply`}

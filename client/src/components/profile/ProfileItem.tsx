@@ -16,7 +16,7 @@ export const ProfileItem: React.FC<ProfileItemProps> = ({
 		<div className="fill=blue-900">{icon}</div>
 		<span className="font-semibold dark:font-medium">
 			<span className="tab-font">{label}:</span>
-			<span className="text-indigo-900 dark:text-babyPowder">{value}</span>
+			<span className="dark:text-babyPowder text-indigo-900">{value}</span>
 		</span>
 	</div>
 );

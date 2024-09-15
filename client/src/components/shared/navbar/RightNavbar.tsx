@@ -13,8 +13,8 @@ export default function RightNavbar() {
 	const topPosts = data?.top_posts.results;
 	const { data: tagData } = useGetPopularTagsQuery();
 	return (
-		<section className="bg-blue-50/60 hover:bg-blue-50/80 dark:bg-slate-800/60 dark:hover:bg-slate-800/80 light-border custom-scrollbar shadow-slate-800/40 sticky right-0 top-0 flex h-screen w-[297px] flex-col justify-between overflow-y-auto border-l p-6 pt-32 max-xl:hidden">
-			<div className="bg-blue-50/60 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90 p-2 rounded-md">
+		<section className="light-border custom-scrollbar sticky right-0 top-0 flex h-screen w-[297px] flex-col justify-between overflow-y-auto border-l bg-blue-50/60 p-6 pt-32 shadow-slate-800/40 hover:bg-blue-50/80 max-xl:hidden dark:bg-slate-800/60 dark:hover:bg-slate-800/80">
+			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-700 dark:text-green-500">
 					Top Posts
 				</h3>
@@ -26,7 +26,7 @@ export default function RightNavbar() {
 								href={`/post/${post.slug}`}
 								className="flex cursor-pointer items-center justify-between gap-7"
 							>
-								<p className="font-semibold dark:font-medium hover:text-electricIndigo text-blue-950 dark:text-blue-50 dark:hover:text-electricIndigo">
+								<p className="hover:text-electricIndigo dark:hover:text-electricIndigo font-semibold text-blue-950 dark:font-medium dark:text-blue-50">
 									{post.title.length > 34
 										? `${post.title.substring(0, 34)}...`
 										: post.title}
@@ -42,7 +42,7 @@ export default function RightNavbar() {
 				</div>
 			</div>
 
-			<div className="bg-blue-50/60 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90 p-2 rounded-md">
+			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-700 dark:text-green-500">
 					Popular Tags
 				</h3>
@@ -55,12 +55,12 @@ export default function RightNavbar() {
 								className="flex cursor-pointer items-center justify-between gap-7"
 							>
 								<div className="flex items-center gap-2">
-									<span className="font-semibold dark:font-medium text-blue-950 hover:text-electricIndigo dark:text-blue-50 dark:hover:text-electricIndigo">
+									<span className="hover:text-electricIndigo dark:hover:text-electricIndigo font-semibold text-blue-950 dark:font-medium dark:text-blue-50">
 										{tag.name}
 									</span>
 									<span
 										className="
-                                   font-semibold dark:font-medium text-blue-950 dark:text-blue-50"
+                                   font-semibold text-blue-950 dark:font-medium dark:text-blue-50"
 									>
 										({tag.post_count})
 									</span>

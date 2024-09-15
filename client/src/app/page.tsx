@@ -23,13 +23,13 @@ export default function HomePage() {
 					priority
 				/>
 			</div>
-			<div className="m-auto relative z-10 h-full">
+			<div className="relative z-10 m-auto h-full">
 				<div className="text-shine">
 					<div className="mb-0">Welcome</div>
 					<div className="mt-0">Kreative Apartments</div>
 				</div>
 				<div className="text-mainsite">
-					<p className="home-text mt-36 mb-2 text-4xl 2xl:text-6xl sm:text-5xl">
+					<p className="home-text mb-2 mt-36 text-4xl sm:text-5xl 2xl:text-6xl">
 						If you are not a tenant.
 					</p>
 					<Link href="/register" prefetch={false}>
@@ -41,7 +41,7 @@ export default function HomePage() {
 						</button>
 					</Link>
 
-					<p className="home-text mt-8 mb-2 text-4xl sm:text-5xl 2xl:text-6xl">
+					<p className="home-text mb-2 mt-8 text-4xl sm:text-5xl 2xl:text-6xl">
 						If you are a tenant.
 					</p>
 					<Link href="/login" prefetch={false}>
