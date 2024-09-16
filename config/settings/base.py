@@ -5,6 +5,8 @@ import platform
 import cloudinary
 from datetime import timedelta
 
+from django.contrib.auth import get_user_model
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 APPS_DIR = BASE_DIR / "core_apps"
@@ -204,8 +206,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TAGGIT_CASE_INSENSITIVE = True
 
 
-
-AUTH_USER_MODEL = "users.User"
+try:
+    AUTH_USER_MODEL = "users.User"
+except:
+    AUTH_USER_MODEL = get_user_model()    
 
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE
