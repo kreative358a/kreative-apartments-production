@@ -6,7 +6,7 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from core_apps.common.renderers import GenericJSONRenderer
 from core_apps.profiles.models import Profile
-from .models import Apartment
+from .models import Apartment, ApartmentBase, actual_estate
 from .serializers import ApartmentSerializer, ApartmentSelectSerializer
 from core_apps.profiles.serializers import UpdateProfileSerializer
 import time
@@ -14,6 +14,55 @@ from django.db.models import F
 from rest_framework import views, mixins
 from django.shortcuts import get_object_or_404
 from rest_framework.exceptions import PermissionDenied, ValidationError, NotFound
+
+def create_list_apartment():            
+    try:
+        apartments = Apartment.objects.all()
+        if apartments.count() > 0:
+        # if apartments.count() < 0:                
+            apartments_list = [[f'Building-{a.building}', f'Floor-{a.floor}', f'{a.unit_number}', a.available] for a in apartments]
+            estate_base_dict_object = actual_estate(apartments_list)
+            estate_json_object = json.dumps(estate_base_dict_object, sort_keys=True)                    
+            apartmentbase = ApartmentBase.objects.all()
+            
+            if apartmentbase.count() > 0:
+                apartmentbase = ApartmentBase.objects.all()[0]
+
+                apartmentbase.apartments_base = estate_json_object
+                apartmentbase.save()
+            elif apartmentbase.count() == 0: 
+                ApartmentBase.objects.create(apartments_base=estate_json_object)
+                
+        elif apartments.count() == 0:
+            list_buildings = ["A", "B", "C", "D", "E", "F"]
+            list_floors = [0, 1, 2, 3]
+            list_numbers = ["1", "2", "3", "4"]
+            for b in list_buildings:
+                for fl in list_floors:
+                    for n in list_numbers:
+                        Apartment.objects.create(building=b, floor=fl, unit_number=f"{fl}-{n}", apartment_id=f"{b}_{fl}_{fl}-{n}")
+                        time.sleep(0.01)
+            time.sleep(0.1)                            
+            try:
+                apartments = Apartment.objects.all()
+                apartments_list = [[f'Building-{a.building}', f'Floor-{a.floor}', f'{a.unit_number}', a.available] for a in apartments]
+                estate_base_dict_object = actual_estate(apartments_list)
+                estate_json_object = json.dumps(estate_base_dict_object, sort_keys=True)                    
+                apartmentbase = ApartmentBase.objects.all()
+                
+                if apartmentbase.count() > 0:
+                    apartmentbase = ApartmentBase.objects.all()[0]
+
+                    apartmentbase.apartments_base = estate_json_object
+                    apartmentbase.save()
+                else: 
+                    ApartmentBase.objects.create(apartments_base=estate_json_object)
+                    # print("apartmentbase.apartment_base =", apartmentbase.apartments_base)
+            except Exception as e:
+                print(f"200. apartmennts Exception as {e}")                                  
+                # print("apartmentbase.apartment_base =", apartmentbase.apartments_base)
+    except Exception as e:
+        print(f"203. apartmennts Exception as {e}")  
 
 class ApartmentListAPIView(generics.ListCreateAPIView):
     serializer_class = ApartmentSerializer
@@ -35,6 +84,10 @@ class ApartmentCreateAPIView(generics.CreateAPIView):
     object_label = "apartment"
 
     def post(self, request: Request, *args: Any, **kwargs: Any):
+        try:
+            create_list_apartment()
+        except Exception as e:
+            print(f"90 Exception as {e}")
         user = request.user
         # apartment_vals = request.data
         serializer = self.serializer_class(data=request.data)
