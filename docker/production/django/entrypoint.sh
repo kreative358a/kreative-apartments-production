@@ -8,12 +8,8 @@ python <<END
 import sys
 import time
 import psycopg2
-
-
 suggest_unrecoverable_after = 30
 start = time.time()
-
-
 while True:
    try:
        psycopg2.connect(
