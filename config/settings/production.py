@@ -14,8 +14,8 @@ SECRET_KEY = getenv(
 # SECURITY WARNING: don't run with debug turned on in production!
 ADMIN_URL = getenv("DJANGO_ADMIN_URL")
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = [".kreative-apartments.pro"]
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".kreative-apartments.pro"]
 # ALLOWED_HOSTS = [".homeidea.pl"]
 ADMINS = [
     ("Piotr Kreative", "kreative-apartments@hotmail.com"),
