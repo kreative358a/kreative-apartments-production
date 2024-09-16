@@ -42,14 +42,14 @@ export const registerUserSchema = z
 		//	.min(8, { message: "Password must be at least 8 characters"})
 		//	.union([pU, pL, pD]),
 		
-		/*password: z.string().regex(/[A-Z]/, "Password must contain at least one uppercase letter").regex(/[a-z]/, "Password must contain at least one lowercase letter").regex(/\d/, "Password must contain at least one digit").regex(/[^A-Za-z0-9]/, "Password must contain at least one special character"), */
+		/* password: z.string().regex(/[A-Z]/, "Password must contain at least one uppercase letter").regex(/[a-z]/, "Password must contain at least one lowercase letter").regex(/\d/, "Password must contain at least one digit").regex(/[^A-Za-z0-9]/, "Password must contain at least one special character"), */
 		/* password: z
 			.union([
 			z.string().trim().min(8, { message: "Password must be at least 8 characters"}),
 			z.string().regex(/[A-Z]/, { message: "Password must contain at least one uppercase letter" }),
 			z.string().regex(/[a-z]/, { message: "Password must contain at least one uppercase letter" }),
 			z.string().regex(/\d/, { message:  "Password must contain at least one lowercase letter" })
-		]),*/	// ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*\_)).{8,}$
+		]), */	// ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])((?=.*\W)|(?=.*\_)).{8,}$
 		password: z.string().trim().regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/, {message: "Must contain at least one number, one uppercase, lowercase letter, and at least 8 or more characters"}),		
 			// .regex(/[A-Z]/, { message: "Password must contain at least one uppercase letter" })
 			// .regex(/[a-z]/, { message:  "Password must contain at least one lowercase letter" })
