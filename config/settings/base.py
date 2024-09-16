@@ -98,24 +98,57 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-if platform.system()=="Linux":
-    DATABASES = {
-        'default': {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": getenv("POSTGRES_DB"),
-            "USER": getenv("POSTGRES_USER"),
-            "PASSWORD": getenv("POSTGRES_PASSWORD"),
-            "HOST": getenv("POSTGRES_HOST"),
-            "PORT": getenv("POSTGRES_PORT"),
-        }
+DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": getenv("POSTGRES_DB"),
+        "USER": getenv("POSTGRES_USER"),
+        "PASSWORD": getenv("POSTGRES_PASSWORD"),
+        "HOST": getenv("POSTGRES_HOST"),
+        "PORT": getenv("POSTGRES_PORT"),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+}
+
+
+# if platform.system()=="Windows":
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }  
+
+# else:
+#     DATABASES = {
+#         'default': {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": getenv("POSTGRES_DB"),
+#             "USER": getenv("POSTGRES_USER"),
+#             "PASSWORD": getenv("POSTGRES_PASSWORD"),
+#             "HOST": getenv("POSTGRES_HOST"),
+#             "PORT": getenv("POSTGRES_PORT"),
+#         }
+#     }
+
+
+# if platform.system()=="Linux":
+#     DATABASES = {
+#         'default': {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": getenv("POSTGRES_DB"),
+#             "USER": getenv("POSTGRES_USER"),
+#             "PASSWORD": getenv("POSTGRES_PASSWORD"),
+#             "HOST": getenv("POSTGRES_HOST"),
+#             "PORT": getenv("POSTGRES_PORT"),
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
