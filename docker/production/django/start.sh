@@ -7,7 +7,6 @@ set -o pipefail
 set -o nounset
 
 python /app/manage.py collectstatic --noinput
-python /app/manage.py migrate users
 python /app/manage.py migrate
 
 # NUM_WORKERS=${GUNICORN_WORKERS:-3}
