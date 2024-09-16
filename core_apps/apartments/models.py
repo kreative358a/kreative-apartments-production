@@ -17,6 +17,7 @@ def get_request():
 
 User = get_user_model()
 
+apartments_base_string = '{"Building-A": {"Floor-0": ["0-1 disabled", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-B": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-C": {"Floor-1": ["0-1", "0-2", "0-3", "0-4"], "Floor-2": ["1-1", "1-2", "1-3", "1-4"], "Floor-3": ["2-1", "2-2", "2-3", "2-4"], "Floor-4": ["3-1", "3-2", "3-3", "3-4"]}, "Building-D": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-E": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}, "Building-F": {"Floor-0": ["0-1", "0-2", "0-3", "0-4"], "Floor-1": ["1-1", "1-2", "1-3", "1-4"], "Floor-2": ["2-1", "2-2", "2-3", "2-4"], "Floor-3": ["3-1", "3-2", "3-3", "3-4"]}}'
 
 def estate_to_object_dict(apartment_list):
     estate = {}
@@ -56,6 +57,7 @@ class ApartmentBase(models.Model):
         verbose_name=_("Apartments BaseJson"), 
         blank=True, 
         null=True,
+        default=apartments_base_string
         # unique=True,
         )
  
