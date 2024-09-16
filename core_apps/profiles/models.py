@@ -103,6 +103,7 @@ class Profile(TimeStampedModel):
     )   
     
     apartment_profile = models.CharField(verbose_name=_("Apartment Id"), max_length=10, blank=True, null=True, default="")
+    age=models.PositiveIntegerField(default=0, verbose_name=_("Age"))
     
 
     def __str__(self) -> str:
