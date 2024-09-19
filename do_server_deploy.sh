@@ -1,11 +1,7 @@
 #!/bin/bash
 
 set -e
-# shellcheck disable=SC2034
-# DIGITAL_OCEAN_IP_ADDRESS="52.42.141.22"
 if [ -z "$DIGITAL_OCEAN_IP_ADDRESS" ]; then
-# shellcheck disable=SC2157
-# if [ -z "52.42.141.22" ]; then
   echo "Error: DIGITAL_OCEAN_IP_ADDRESS not defined"
   exit 1
 fi
