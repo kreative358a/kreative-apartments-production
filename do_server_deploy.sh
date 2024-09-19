@@ -26,7 +26,6 @@ rsync -avz --progress ./project.tar root@"$DIGITAL_OCEAN_IP_ADDRESS":/tmp/projec
 echo "Building and deploying on the server..."
 
 ssh -o StrictHostKeyChecking=no root@$DIGITAL_OCEAN_IP_ADDRESS <<'ENDSSH'
-# ssh -o StrictHostKeyChecking=no root@52.42.141.22 <<'ENDSSH'
 
 set -e
 

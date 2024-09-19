@@ -36,7 +36,7 @@ export default function IssueCard({ issue }: IssueCardProps) {
 		<Link href={`/issue/${issue.id}`} key={issue.id}>
 			<Card
 				key={issue.id}
-				className="dark:border-gray hover:dark:border-platinum box-shadow rounded-lg border border-dashed border-orange-500/80 bg-blue-50/90 duration-300 hover:scale-105 hover:border-orange-500 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800"
+				className="dark:border-gray hover:dark:border-platinum box-shadow rounded-md border border-dashed border-orange-500/80 bg-blue-50/90 duration-300 hover:scale-105 hover:border-orange-500 hover:bg-blue-50 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 			>
 				<CardHeader>
 					<CardTitle className="flex-center h3-semibold font-robotoSlab text-lime-700 dark:text-lime-500">

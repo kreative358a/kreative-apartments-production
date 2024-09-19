@@ -1,7 +1,7 @@
 // 128.-130. Apartment Page & Validation Schema
 import ApartmentCreateForm from "@/components/forms/apartment/ApartmentCreateForm";
 // import MyApartmentCreateForm from "@/components/forms/apartment/MyApartmentCreateForm";
-import {ApartmentSelectForm} from "@/components/forms/apartment/ApartmentSelectForm";
+import { ApartmentSelectForm } from "@/components/forms/apartment/ApartmentSelectForm";
 import { AuthFormHeader } from "@/components/forms/auth";
 import type { Metadata } from "next";
 
@@ -20,15 +20,15 @@ export default function AddApartmentPage() {
 				linkHref="/profile"
 			/>
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
-				<div className="rounded-lg bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-lg sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
+				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-md sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<ApartmentCreateForm />
 				</div>
 			</div>
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
-				<div className="rounded-lg bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-lg sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
+				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-md sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<ApartmentSelectForm />
 				</div>
-			</div>			
+			</div>
 		</div>
 	);
 }

@@ -19,7 +19,7 @@ export default function ForgotPassword() {
 				linkHref="/login"
 			/>
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
-				<div className="bg-lightGrey/80 hover:bg-lightGrey/95 dark:bg-deepBlueGrey/80 dark:hover:bg-deepBlueGrey/95 px-6 py-12 shadow sm:rounded-lg sm:px-12 md:rounded-xl">
+				<div className="bg-lightGrey/80 hover:bg-lightGrey/95 dark:bg-deepBlueGrey/80 dark:hover:bg-deepBlueGrey/95 px-6 py-12 shadow sm:rounded-md sm:px-12 md:rounded-xl">
 					<PasswordResetRequestForm />
 				</div>
 			</div>

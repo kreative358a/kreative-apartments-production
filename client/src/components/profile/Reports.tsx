@@ -34,7 +34,7 @@ export default function Reports() {
 					myReport.results.map((report) => (
 						<Card
 							key={report.id}
-							className="dark:border-gray hover:dark:border-platinum rounded-lg border border-dashed border-orange-500/60 hover:border-orange-500"
+							className="dark:border-gray hover:dark:border-platinum rounded-md border border-dashed border-orange-500/60 hover:border-orange-500"
 						>
 							<CardHeader>
 								<CardTitle className="flex-center h3-semibold font-robotoSlab h-10 text-lime-900 dark:text-lime-500">

@@ -205,11 +205,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TAGGIT_CASE_INSENSITIVE = True
 
-
-try:
-    AUTH_USER_MODEL = "users.User"
-except:
-    AUTH_USER_MODEL = get_user_model()    
+AUTH_USER_MODEL = "users.User"
+# try:
+#     AUTH_USER_MODEL = "users.User"
+# except:
+#     AUTH_USER_MODEL = get_user_model()    
 
 if USE_TZ:
     CELERY_TIMEZONE = TIME_ZONE

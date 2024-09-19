@@ -55,13 +55,13 @@ function PostDetailsContent({ params }: PostDetailsProps) {
 	};
 
 	return (
-		<Card className="mx-auto max-w-[720px] rounded-lg border border-dashed border-slate-600 bg-blue-50/90 hover:bg-blue-50 dark:border-slate-500 dark:bg-slate-800/90 dark:hover:bg-slate-800">
+		<Card className="mx-auto max-w-[720px] rounded-md border border-dashed border-slate-600 bg-blue-50/90 hover:bg-blue-50 dark:border-slate-500 dark:bg-slate-800/90 dark:hover:bg-slate-800">
 			<AuthFormHeader
 				linkText="Go back to Home"
 				linkHref="/welcome"
 				title={post?.title}
 			/>
-			<CardHeader className="flex-start w-full flex-col rounded-lg border border-indigo-800 dark:border-indigo-800">
+			<CardHeader className="flex-start w-full flex-col rounded-md border border-indigo-800 dark:border-indigo-800">
 				<div className="flex w-full flex-col justify-between sm:items-center sm:gap-2">
 					<PostHeader
 						title={post?.title}

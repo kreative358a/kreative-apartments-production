@@ -36,23 +36,21 @@ export default function PostTagCard({ params }: SlugParamsProps) {
 
 	return (
 		<>
-		<div className="mx-auto flex flex-row items-center justify-between gap-4">
-			<h2 className="flex-center font-robotoSlab text-[28px] font-semibold text-blue-900 md:text-[32px] xl:text-[36px] 2xl:text-[40px] dark:font-medium dark:text-blue-500">
-				Posts tagged with {"  "}
-				<span className="text-electricIndigo ml-1 font-semibold dark:font-medium dark:text-lime-500">
-					&ldquo;{params.tagSlug}&rdquo;
-				</span>
-			</h2>
-		</div>
+			<div className="mx-auto flex flex-row items-center justify-between gap-4">
+				<h2 className="flex-center font-robotoSlab text-[28px] font-semibold text-blue-900 md:text-[32px] xl:text-[36px] 2xl:text-[40px] dark:font-medium dark:text-blue-500">
+					Posts tagged with {"  "}
+					<span className="text-electricIndigo ml-1 font-semibold dark:font-medium dark:text-lime-500">
+						&ldquo;{params.tagSlug}&rdquo;
+					</span>
+				</h2>
+			</div>
 			<div className="mt-7 grid grid-cols-1 gap-6 md:grid-cols-2 2xl:grid-cols-3">
 				{posts.map((post) => (
 					<Card
 						key={post.id}
-						className="box-shadow mx-auto max-w-[480px] rounded-lg border border-indigo-800 bg-blue-50/90 duration-300 hover:scale-105 hover:bg-blue-50 sm:w-full dark:border-indigo-800 dark:bg-slate-800/90 dark:hover:bg-slate-800"
+						className="box-shadow mx-auto max-w-[480px] rounded-md border border-indigo-800 bg-blue-50/90 duration-300 hover:scale-105 hover:bg-blue-50 sm:w-full dark:border-indigo-800 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 					>
-						<CardHeader
-							className="pb-4 font-medium text-blue-900 dark:font-normal dark:text-blue-50"
-						>
+						<CardHeader className="pb-4 font-medium text-blue-900 dark:font-normal dark:text-blue-50">
 							<CardTitle className=" text-center text-xl">
 								{post.title.length > 25
 									? `${post.title.substring(0, 25)}....`
@@ -63,7 +61,7 @@ export default function PostTagCard({ params }: SlugParamsProps) {
 									<div className="font-semibold dark:font-medium">
 										<span className="text-blue-900 dark:text-blue-50">
 											Posted on:{" "}
-											</span>
+										</span>
 										<span className="ml-2 text-orange-800 dark:text-orange-600">
 											{formatDate(post.created_at).toString()}
 										</span>
@@ -73,19 +71,17 @@ export default function PostTagCard({ params }: SlugParamsProps) {
 								<div className="font-semibold dark:font-medium">
 									<span className="text-blue-900 dark:text-blue-50">
 										Last Updated:{" "}
-										</span>
+									</span>
 									<span className="ml-2 text-orange-700 dark:text-blue-500">
 										{formatDistanceToNow(parseISO(post.updated_at), {
 											addSuffix: true,
 										})}
 									</span>
 								</div>
-								
 							</CardDescription>
 						</CardHeader>
 
 						<CardContent className="border-t-deepBlueGrey dark:border-gray text-md border-y py-4">
-
 							<p className="rounded-sm p-2 font-semibold text-blue-950 dark:font-normal dark:text-blue-50">
 								{post.body.length > 65
 									? `${post.body.substring(0, 65)}....`
@@ -107,7 +103,7 @@ export default function PostTagCard({ params }: SlugParamsProps) {
 							</div>
 							<div className="flex-row-center font-semibold text-slate-800 dark:font-medium dark:text-blue-50">
 								<MessageSquareQuoteIcon className="post-icon text-electricIndigo mr-1" />
-								<span  className="text-blue-900 dark:text-blue-50">
+								<span className="text-blue-900 dark:text-blue-50">
 									{getRepliesText(post.replies_count)}
 								</span>
 							</div>
@@ -115,8 +111,6 @@ export default function PostTagCard({ params }: SlugParamsProps) {
 					</Card>
 				))}
 			</div>
-		
-	</>
+		</>
 	);
-	
 }

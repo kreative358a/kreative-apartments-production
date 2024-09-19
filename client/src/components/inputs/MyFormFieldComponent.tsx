@@ -66,7 +66,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 				<Textarea
 					{...register(name, { required })}
 					placeholder={placeholder}
-					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
+					className={`rounded-sm border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 				/>
 			);
 		} else if (isPassword) {
@@ -74,7 +74,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 				<PasswordInputTooltip
 					{...register(name, { required })}
 					placeholder={placeholder}
-					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-none focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
+					className={`rounded-sm border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-none focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 				/>
 			);
 		} else {
@@ -87,7 +87,7 @@ export function FormFieldComponent<TFieldValues extends FieldValues>({
 					startIcon={startIcon}
 					endIcon={endIcon}
 					disabled={disabled}
-					className={`border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring dark:border-blue-200/60  dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
+					className={`rounded-sm border-2 border-blue-900/60 bg-slate-50/40 font-semibold text-blue-900 hover:bg-slate-50/60 focus:border-blue-800 focus:bg-slate-50/80 focus:outline-none focus:ring  dark:border-blue-200/60 dark:bg-slate-800/40 dark:font-medium dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80 ${className}`}
 					value={value}
 					readOnly={readOnly}
 					// onChange={onChange}

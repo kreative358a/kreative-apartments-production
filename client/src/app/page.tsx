@@ -33,7 +33,7 @@ export default function HomePage() {
 						If you are not a tenant.
 					</p>
 					<Link href="/register" prefetch={false}>
-						<button className="home-btn rounded-lg px-4 py-2 text-xl font-semibold sm:px-4 md:text-2xl">
+						<button className="home-btn rounded-md px-4 py-2 text-xl font-semibold sm:px-4 md:text-2xl">
 							<span className="inline-flex items-center">
 								Create Your Account
 								<ArrowRightIcon className="ml-2 size-6" />
@@ -45,7 +45,7 @@ export default function HomePage() {
 						If you are a tenant.
 					</p>
 					<Link href="/login" prefetch={false}>
-						<button className="home-btn rounded-lg px-4 py-2 text-xl font-semibold sm:px-4 md:text-2xl">
+						<button className="home-btn rounded-md px-4 py-2 text-xl font-semibold sm:px-4 md:text-2xl">
 							<span className="inline-flex items-center">
 								Login your Account
 								<ArrowRightIcon className="ml-2 size-6" />

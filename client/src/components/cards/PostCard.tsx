@@ -43,7 +43,7 @@ export default function PostCard() {
 			</div>
 		);
 	}
-// h3-semibold electricIndigo-gradient text-blue-50 min-h-[46px] px-4 py-3
+	// h3-semibold electricIndigo-gradient text-blue-50 min-h-[46px] px-4 py-3
 	return (
 		<>
 			<div className="mx-auto flex flex-row items-center justify-between gap-4">
@@ -63,11 +63,9 @@ export default function PostCard() {
 					sortedPosts.map((postItem) => (
 						<Card
 							key={postItem.id}
-							className="box-shadow hover:scale-103 mx-auto rounded-lg border border-indigo-800 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-indigo-900 dark:bg-slate-800/90 dark:hover:bg-slate-800"
+							className="box-shadow hover:scale-103 mx-auto rounded-md border border-indigo-800 bg-blue-50/90 duration-300 hover:bg-blue-50 max-2xl:max-w-md max-sm:w-9/12 dark:border-indigo-900 dark:bg-slate-800/90 dark:hover:bg-slate-800"
 						>
-							<CardHeader 
-							className="pb-4 font-medium text-blue-900 dark:font-normal dark:text-blue-50"
-							>
+							<CardHeader className="pb-4 font-medium text-blue-900 dark:font-normal dark:text-blue-50">
 								<CardTitle className="text-center text-xl">
 									{postItem.title.length > 25
 										? `${postItem.title.substring(0, 25)}....`
