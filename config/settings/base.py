@@ -220,6 +220,7 @@ CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_RESULT_BACKEND_MAX_RETRIES = 10
+# CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True
 
 CELERY_TASK_SEND_SENT_EVENT = True
 CELERY_RESULT_EXTENDED = True
@@ -237,6 +238,7 @@ CELERY_WORKER_SEND_TASK_EVENTS = True
 CELERY_BEAT_SCHEDULE = {
     "update-reputations-every-day": {
         "task": "update_all_reputations",
+        # "schedule": timedelta(days=1),
     }
 }
 
