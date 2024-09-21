@@ -99,29 +99,7 @@ const PasswordInputTooltip = React.forwardRef<
 	return (
 		<>
 			<div id="tooltipPass" className="tooltip">
-				<Input
-					type={showPassword ? "text" : "password"}
-					id={"password"}
-					startIcon={
-						showPassword ? (
-							<EyeIcon
-								onClick={() => setShowPassword(false)}
-								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
-							/>
-						) : (
-							<EyeOffIcon
-								onClick={() => setShowPassword(true)}
-								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
-							/>
-						)
-					}
-					className={
-						"border-2 border-blue-900/60 bg-slate-50/40 dark:border-blue-200/60 dark:bg-slate-800/40"
-					}
-					{...props}
-					ref={ref}
-				/>
-				<span
+			<span
 					id="tooltiptextPass"
 					className="bg-blue-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-slate-900"
 				>
@@ -145,7 +123,30 @@ const PasswordInputTooltip = React.forwardRef<
 							Minimum <b>8 characters</b>
 						</p>
 					</div>
-				</span>
+				</span>				
+				<Input
+					type={showPassword ? "text" : "password"}
+					id={"password"}
+					startIcon={
+						showPassword ? (
+							<EyeIcon
+								onClick={() => setShowPassword(false)}
+								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
+							/>
+						) : (
+							<EyeOffIcon
+								onClick={() => setShowPassword(true)}
+								className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50"
+							/>
+						)
+					}
+					className={
+						"border-2 border-blue-900/60 bg-slate-50/40 dark:border-blue-200/60 dark:bg-slate-800/40"
+					}
+					{...props}
+					ref={ref}
+				/>
+
 			</div>
 		</>
 	);

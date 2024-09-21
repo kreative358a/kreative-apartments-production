@@ -14,7 +14,7 @@ export default function LoginPage() {
 				linkHref="/register"
 			/>
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
-				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:rounded-md sm:px-12 md:rounded-xl dark:bg-slate-800/90 dark:hover:bg-slate-800">
+				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:px-12 md:rounded-lg dark:bg-slate-800/90 dark:hover:bg-slate-800">
 					<LoginForm />
 					<div className="flex-center mt-5 space-x-2">
 						<div className="h-0.5 flex-1 bg-indigo-950/80 hover:bg-indigo-950 dark:bg-blue-50/95 dark:text-blue-50/80 dark:hover:bg-blue-50"></div>

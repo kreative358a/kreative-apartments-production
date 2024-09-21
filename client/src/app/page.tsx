@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import buildings from "@/../public/assets/images/buildings.webp";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-
+import  { DialogInfoApp }  from "../components/shared/navbar/InfoDialog";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +23,9 @@ export default function HomePage() {
 					priority
 				/>
 			</div>
+			
 			<div className="relative z-10 m-auto h-full">
+			<DialogInfoApp/>
 				<div className="text-shine">
 					<div className="mb-0">Welcome</div>
 					<div className="mt-0">Kreative Apartments</div>
