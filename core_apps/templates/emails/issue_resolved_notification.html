@@ -3,15 +3,15 @@
 {% block title %} Issue Resolved {% endblock title %}
 
 {% block content %}
-<h6>Dear {{ issue.reported_by.get_full_name }},</h6>
-<p>Your reported issue titled "<strong>{{ issue.title }}</strong>" has been resolved.</p>
-<p>Description: {{ issue.description }}</p>
-<p>Resolved By: <strong>{{ issue.assigned_to.get_full_name }} </strong>
+<p style="color: blue; font-size: 14px; font-weight: bold;">Dear {{ issue.reported_by.get_full_name }},</p>
+<p style="color: blue; font-size: 14px;">Your reported issue titled "<strong>{{ issue.title }}</strong>" has been resolved.</p>
+<p style="color: blue; font-size: 14px;">Description: {{ issue.description }}</p>
+<p style="color: blue; font-size: 14px;">Resolved By: <strong>{{ issue.assigned_to.get_full_name }} </strong>
 </p>
-<p>Resolved On: <strong>{{ issue.resolved_on }}</strong>
+<p style="color: blue; font-size: 14px;">Resolved On: <strong>{{ issue.resolved_on }}</strong>
 </p>
-<p>Thank you bringing this to our attention.</p>
-<p>Regards,<br>
+<p style="color: blue; font-size: 14px;">Thank you bringing this to our attention.</p>
+<p style="color: blue; font-size: 14px; font-weight: bold;">Regards,<br>
   The {{ site_name }} Team
 </p>
 {% endblock content %}

@@ -578,8 +578,8 @@ body::-webkit-scrollbar {
 		padding: 5px 0;
 		position: absolute;
 		z-index: 1;
-		top: 140%;
-		/* bottom: 140%; */
+		/* top: 140%; */
+		bottom: 140%; 
 		left: 50%;
 		margin-left: -40%;
 		border: 2px solid aliceblue;
@@ -589,14 +589,14 @@ body::-webkit-scrollbar {
 	#tooltiptextPass::after {
 		content: "";
 		position: absolute;
-		bottom: 100%; 
-		/* top: 100%; */
+		/* bottom: 100%; */
+		top: 100%; 
 		left: 50%;
 		margin-left: -16px;
 		border-width: 16px;
 		border-style: solid;
-		border-color: transparent transparent #f1f1f1 transparent;
-		/* border-color: #f1f1f1 transparent transparent transparent; */
+		/* border-color: transparent transparent #f1f1f1 transparent; */
+		border-color: #f1f1f1 transparent transparent transparent;
 	}
 
 	#messagePass {

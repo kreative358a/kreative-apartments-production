@@ -3,17 +3,17 @@
 {% block title %} You have been reported! {% endblock title %}
 
 {% block content %}
-<p>Dear {{ user.first_name }} {{ user.last_name }},</p>
-<p>You have been reported for the following issue:</p>
+<p style="color: blue; font-size: 14px; font-weight: bold;">Dear {{ user.first_name }} {{ user.last_name }},</p>
+<p style="color: darkblue; font-size: 14px;">You have been reported for the following issue:</p>
 <p><strong>{{ title }}</strong></p>
-<p>Description: <strong> {{ description }}</strong></p>
-<p>Kindly address this issue, to avoid further complaints and reports by other tenants</p>
-<p>Please note that if you are reported 5 times your account will be deactivated, and you shall be served a 30-day
+<p style="color: darkblue; font-size: 14px;">Description: <strong> {{ description }}</strong></p>
+<p style="color: darkblue; font-size: 14px;">Kindly address this issue, to avoid further complaints and reports by other tenants</p>
+<p style="color: darkblue; font-size: 14px;">Please note that if you are reported 5 times your account will be deactivated, and you shall be served a 30-day
   eviction notice
 </p>
-<p>This is per the tenancy terms and conditions that you agreed and signed on, when you joined us.
+<p style="color: darkblue; font-size: 14px;">This is per the tenancy terms and conditions that you agreed and signed on, when you joined us.
 </p>
-<p>Regards,<br>
+<p style="color: blue; font-size: 14px; font-weight: bold;">Regards,<br>
   The {{ site_name }} Team
 </p>
 {% endblock content %}

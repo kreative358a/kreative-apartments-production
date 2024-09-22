@@ -126,8 +126,8 @@ const PasswordInputTooltip = React.forwardRef<
 					className="bg-blue-100 hover:bg-blue-50 dark:bg-slate-800 dark:hover:bg-slate-900"
 				>
 					<div id="messagePass" className="font-semibold dark:font-medium">
-						<h4 className="text-blue-950 dark:text-blue-50">
-							Password must contain the following:
+						<h4 className="mb-2 text-blue-950 dark:text-blue-50">
+							Password must contain:
 						</h4>
 						<p id="letterPass" className="invalid">
 							A <b>lowercase</b> letter
