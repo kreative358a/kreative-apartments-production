@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 	--select-text-color: aliceblue;
 	--select-border-hover-color: rgb(228, 230, 232);
 	--select-border-focus-color: rgb(238, 240, 242);
-	--select-option-selected-background-color: rgb(74, 85, 104);
+	--select-option-selected-background-color: rgba(39, 76, 139, 0.9);
 	--select-option-background-color: rgba(50, 61, 79, 0.6);
 	--select-option-text-color: aliceblue;
 	--select-option-font-wight: normal;

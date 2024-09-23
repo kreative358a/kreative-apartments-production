@@ -33,10 +33,13 @@ import React, { useState, FC, useRef } from "react";
 import Select, { Props } from "react-select";
 import customStyles from "../selectStyles";
 import { type ClassValue, clsx } from "clsx";
-import { selectComponent, selectClassStyle, selectStyle } from "../myselectStyles";
+import {
+	selectComponent,
+	selectClassStyle,
+	selectStyle,
+} from "../myselectStyles";
 
 import { useGetApartmentsBase } from "./ApartmentsBase";
-
 
 // export default function ApartmentSelectForm() {
 export const ApartmentSelectForm = ({ ...props }: Props) => {
@@ -153,7 +156,6 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 
 	return (
 		<main>
-
 			<form
 				noValidate
 				onSubmit={handleSubmit(onSubmit)}
@@ -166,9 +168,8 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					Select Building
 				</label>
 				<Select
-				{...props}
-				isSearchable={false}
-				
+					{...props}
+					isSearchable={false}
 					options={buildingOptions}
 					value={{
 						value: buildingSel || "",
@@ -178,7 +179,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					unstyled
 					components={selectComponent}
 					classNames={selectClassStyle}
-					styles={selectStyle}			
+					styles={selectStyle}
 				/>
 				<FormFieldComponent
 					label="Building"
@@ -202,8 +203,8 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 				</label>
 
 				<Select
-				{...props}
-				isSearchable={false}
+					{...props}
+					isSearchable={false}
 					className="mt-0 w-full"
 					options={floorOptions || undefined}
 					value={{
@@ -217,7 +218,6 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					components={selectComponent}
 					classNames={selectClassStyle}
 					styles={selectStyle}
-					
 				/>
 				<FormFieldComponent
 					label="Floor"
@@ -241,8 +241,8 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					Select Unit Number
 				</label>
 				<Select
-				isSearchable={false}
-				// isClearable={true}
+					isSearchable={false}
+					// isClearable={true}
 					className="mt-0 w-full"
 					options={unitNumberOptions || undefined}
 					value={{
@@ -286,17 +286,19 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 					}
 					readOnly={true}
 				/>
-				<FormFieldComponent
-					label="Apartment Available"
-					name="available"
-					register={register}
-					value={"disabled"}
-					errors={errors}
-					startIcon={
-						<Ban className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
-					}
-					readOnly={true}
-				/>
+				<div className="hidden">
+					<FormFieldComponent
+						label="Apartment Available"
+						name="available"
+						register={register}
+						value={"disabled"}
+						errors={errors}
+						startIcon={
+							<Ban className="size-8 font-medium text-blue-800 dark:font-normal dark:text-blue-50" />
+						}
+						readOnly={true}
+					/>
+				</div>
 				<Button
 					type="submit"
 					className="h4-semibold bg-eerieBlue mt-6 w-full text-white dark:bg-orange-500"
@@ -305,11 +307,7 @@ export const ApartmentSelectForm = ({ ...props }: Props) => {
 				>
 					{isLoading ? <Spinner size="sm" /> : `Select Your Apartment`}
 				</Button>
-
-
 			</form>
 		</main>
 	);
-}
-
-
+};

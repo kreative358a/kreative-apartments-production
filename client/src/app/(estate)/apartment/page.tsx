@@ -21,12 +21,12 @@ export default function AddApartmentPage() {
 			/>
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
 				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:px-12 md:rounded-lg dark:bg-slate-800/90 dark:hover:bg-slate-800">
-					<ApartmentCreateForm />
+					<ApartmentSelectForm />
 				</div>
-			</div>
+			</div>			
 			<div className="mx-auto mt-7 max-w-[480px] sm:w-full">
 				<div className="rounded-md bg-blue-50/90 px-6 py-12 shadow hover:bg-blue-50 sm:px-12 md:rounded-lg dark:bg-slate-800/90 dark:hover:bg-slate-800">
-					<ApartmentSelectForm />
+					<ApartmentCreateForm />
 				</div>
 			</div>
 		</div>

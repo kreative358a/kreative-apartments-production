@@ -183,7 +183,7 @@ export default function ApartmentCreateForm() {
 						});
 					  }} */
 				/>
-
+				<div className="hidden">
 				<FormFieldComponent
 					label="Available"
 					name="available"
@@ -204,6 +204,7 @@ export default function ApartmentCreateForm() {
 					}
 					readOnly={true}
 				/>
+				</div>				
 				<Button
 					type="submit"
 					className="h4-semibold bg-eerieBlue mt-6 w-full text-white dark:bg-orange-500"

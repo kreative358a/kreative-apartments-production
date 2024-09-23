@@ -8,21 +8,21 @@ const customStyles = {
 		borderWidth: "var(--select-border-width)",
 		color: "var(--select-text-color)",
 		"&:hover": {
-			backgroundColor:"var(--select-hover-background-color)",
+			backgroundColor: "var(--select-hover-background-color)",
 			borderColor: "var(--select-border-hover-color)",
 		},
 		"&:focus": {
-			backgroundColor:"var(--select-focus-background-color)",
+			backgroundColor: "var(--select-focus-background-color)",
 			borderColor: "var(--select-border-focus-color)",
 		},
 	}),
 
 	option: (provided: any, state: any) => ({
-		...provided,	
+		...provided,
 		marginTop: "2px",
 		marginBottom: "2px",
 		borderColor: "var(--select-border-color)",
-		borderWidth: "var(--select-border-width)",		
+		borderWidth: "var(--select-border-width)",
 		backgroundColor: state.isSelected
 			? "var(--select-option-selected-background-color)"
 			: "var(--select-option-background-color)",
@@ -33,22 +33,22 @@ const customStyles = {
 		},
 	}),
 
-	 singleValue: (provided: any) => ({
+	singleValue: (provided: any) => ({
 		...provided,
 		color: "var(--select-value-text-color)",
-	}),  
+	}),
 	menu: (provided: any) => ({
 		...provided,
 		// backgroundColor: "var(--select-menu-background-color)",
 		// backgroundColor: "var(--select-menu-background-color-transparent)",
 		backgroundColor: "transparent",
-		background: "rgba(120, 120, 160, 0.6)",
+		// background: "rgba(120, 120, 160, 0.6)",
 		"&:hover": {
 			// backgroundColor: "var(--select-menu-hover-background-color)",
 			// backgroundColor: "var(--select-menu-background-color-transparent)",
 			backgroundColor: "transparent",
 			// background: "rgba(120, 120, 160, 0.8)",
-		},		
+		},
 	}),
 
 	menuList: (provided: any) => ({
@@ -56,22 +56,22 @@ const customStyles = {
 		height: "100%",
 		overflowY: "scroll",
 		overflowX: "hidden",
-		scrollbarWidth: "none",	
-		padding: "0px 2px 0px 2px",		
+		scrollbarWidth: "none",
+		padding: "0px 2px 0px 2px",
 		background: "var(--select-menu-background-color)",
 		// backgroundColor: "var(--select-menu-background-color-transparent)",
 		borderColor: "var(--select-border-color)",
-		borderWidth: "2px",	
-		backgroundColor: "transparent",
+		borderWidth: "2px",
+		backgroundColor: "var(--select-menu-background-color)",
+
 		"&:hover": {
 			background: "var(--select-menu-hover-background-color)",
 			// backgroundColor: "var(--select-menu-background-color-transparent)",
-			
-			backgroundColor: "transparent",
-			// background: "rgba(120, 120, 160, 0.6)",
-		},	
-	}),	
-};
 
+			backgroundColor: "var(--select-menu-hover-background-color)",
+			// background: "rgba(120, 120, 160, 0.6)",
+		},
+	}),
+};
 
 export default customStyles;

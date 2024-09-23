@@ -130,7 +130,7 @@ function CreatePostFormContent() {
 								id="tags"
 								placeholder="Add your tags..."
 								onKeyDown={(e) => handleInputKeyDown(e, field)}
-								className="roudnded-sm border-2 border-blue-900/60 bg-slate-50/40 p-4 text-sm font-medium text-blue-900 hover:bg-slate-50/60 focus:bg-slate-50/80 focus:outline-none  focus:ring focus-visible:ring-offset-0 dark:border-blue-200/60 dark:bg-slate-800/40 dark:font-normal dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80"
+								className="roudnded-sm border-2 border-blue-900/60 bg-slate-50/40 p-1 text-sm font-medium text-blue-900 hover:bg-slate-50/60 focus:bg-slate-50/80 focus:outline-none  focus:ring focus-visible:ring-offset-0 dark:border-blue-200/60 dark:bg-slate-800/40 dark:font-normal dark:text-blue-50 dark:hover:bg-slate-800/60 dark:focus:border-blue-50 dark:focus:bg-slate-800/80"
 							/>
 						</>
 					)}
