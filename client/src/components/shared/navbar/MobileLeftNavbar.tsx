@@ -20,7 +20,7 @@ function LeftNavContent() {
 
 	const { filteredNavLinks } = useAuthNavigation();
 	return (
-		<section className="custom-scrollbar mt-8 flex size-full flex-col justify-between overflow-y-auto">
+		<section className="mt-8 flex size-full flex-col justify-between">
 			<div className="flex flex-1 flex-col gap-2 ">
 			{filteredNavLinks.map((linkItem) => {
 				const isActive =
