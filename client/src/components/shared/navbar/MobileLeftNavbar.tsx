@@ -67,7 +67,7 @@ export default function MobileNavbar() {
 					className="invert-colors sm:hidden"
 				/>
 			</SheetTrigger>
-			<SheetContent side="left" className="light-border custom-scrollbar w-[297px]  border-r bg-blue-50/60 shadow-slate-800/40 hover:bg-blue-50/80 dark:bg-slate-800/60 dark:shadow-blue-900/20 dark:hover:bg-slate-800/80">
+			<SheetContent side="left" className="light-border custom-scrollbar w-[297px] overflow-y-auto border-r bg-blue-50/60 shadow-slate-800/40 hover:bg-blue-50/80 dark:bg-slate-800/60 dark:shadow-blue-900/20 dark:hover:bg-slate-800/80">
 			<div className="left-0 flex h-full flex-col justify-between border-none">
 				<Link href="/" className="flex items-center gap-1">
 				
