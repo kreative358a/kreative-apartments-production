@@ -22,7 +22,7 @@ function RightNavContent() {
 	const topPosts = data?.top_posts.results;
 	const { data: tagData } = useGetPopularTagsQuery();
 	return (
-		<section className="custom-scrollbar right-0 mt-8 flex size-full flex-col justify-between overflow-y-auto">
+		<section className="custom-scrollbar right-0 mt-8 flex size-full min-h-[480px] flex-col justify-between overflow-y-auto">
 			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-800 dark:text-green-500">
 					Top Posts
