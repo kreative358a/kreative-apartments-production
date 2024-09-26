@@ -22,7 +22,7 @@ function RightNavContent() {
 	const topPosts = data?.top_posts.results;
 	const { data: tagData } = useGetPopularTagsQuery();
 	return (
-		<section className="right-0 mt-8 flex size-full flex-col justify-between">
+		<section className="custom-scrollbar right-0 mt-8 flex size-full flex-col justify-between overflow-y-auto">
 			<div className="rounded-md bg-blue-50/60 p-2 hover:bg-blue-50/90 dark:bg-slate-900/60 dark:hover:bg-slate-900/90">
 				<h3 className="h3-semibold text-green-800 dark:text-green-500">
 					Top Posts
@@ -110,7 +110,7 @@ export default function MobileNavbarRight() {
 					className="invert-colors xl:hidden"
 				/>
 			</SheetTrigger>
-			<SheetContent side="right" className="custom-scrollbar light-border w-[297px] overflow-y-auto  border-l bg-blue-50/60 shadow-slate-800/40 hover:bg-blue-50/80 dark:bg-slate-800/60  dark:hover:bg-slate-800/80">
+			<SheetContent side="right" className="custom-scrollbar light-border w-[297px] overflow-y-auto border-l  bg-blue-50/60 shadow-slate-800/40 hover:bg-blue-50/80 dark:bg-slate-800/60 dark:hover:bg-slate-800/80">
 			<div className="right-0 flex h-full flex-col justify-between border-none" >
 				<Link href="/" className="flex items-center gap-1">
 					<BuildingOffice2Icon className="mr-2 size-11 text-lime-500" />
