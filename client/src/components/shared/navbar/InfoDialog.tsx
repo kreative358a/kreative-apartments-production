@@ -34,7 +34,7 @@ export function DialogInfoApp() {
               </h4>
               <h4>
                 ● In the case of technicians, there is an option to rate
-                individual people.
+                individual person.
               </h4>
               <h4>
                 ● In the case of tenants, there is an option to report
