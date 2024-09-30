@@ -20,6 +20,8 @@ import {
 	CalendarDays,
 	Map,
 	School,
+	AlignVerticalSpaceAround,
+	FileDigit,
 } from "lucide-react";
 import { formatDate } from "@/utils";
 import ProtectedRoute from "../shared/ProtectedRoutes";
@@ -100,6 +102,7 @@ function TenantCardContent() {
 											value={formatDate(tenant.date_joined).toString()}
 											icon={CalendarDays}
 										/>
+									
 									</div>
 									{tenant.apartment && (
 										<>
@@ -111,13 +114,18 @@ function TenantCardContent() {
 											<TenantInfo
 												label="Apartment Floor"
 												value={tenant.apartment.floor}
-												icon={School}
+												icon={AlignVerticalSpaceAround}
 											/>
 											<TenantInfo
 												label="Unit Number"
 												value={tenant.apartment.unit_number}
-												icon={BrickWall}
+												icon={FileDigit}
 											/>
+											<TenantInfo
+												label="Apartment Id"
+												value={tenant.apartment.apartment_profile}
+												icon={BrickWall}
+											/>											
 										</>
 									)}
 								</CardDescription>

@@ -238,7 +238,7 @@ CELERY_WORKER_SEND_TASK_EVENTS = True
 CELERY_BEAT_SCHEDULE = {
     "update-reputations-every-day": {
         "task": "update_all_reputations",
-        # "schedule": timedelta(days=1),
+        "schedule": timedelta(days=1),
     }
 }
 

@@ -17,6 +17,7 @@ import {
 	UserRoundCheck,
 	AlignVerticalSpaceAround,
 	FileDigit,
+	BrickWall
 } from "lucide-react";
 import { capitalizeFirstLetter, formatDate } from "@/utils";
 import ProtectedRoute from "../shared/ProtectedRoutes";
@@ -112,7 +113,7 @@ function AboutContent() {
 					/> 
 					*/}
 					<ProfileItem
-						icon={<Hotel className="tab-icon" />}
+						icon={<BrickWall className="tab-icon" />}
 						label="Apartment Id"
 						value={profile?.apartment_profile?.toString() || ""}
 					/>
