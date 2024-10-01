@@ -105,7 +105,7 @@ function TenantCardContent() {
 									
 									</div>
 									{tenant.apartment && (
-										<>
+										<div>
 											<TenantInfo
 												label="Building"
 												value={tenant.apartment.building}
@@ -123,10 +123,10 @@ function TenantCardContent() {
 											/>
 											<TenantInfo
 												label="Apartment Id"
-												value={tenant.apartment.apartment_profile}
+												value={tenant.apartment.apartment_id}
 												icon={BrickWall}
-											/>											
-										</>
+											/>		
+										</div>
 									)}
 								</CardDescription>
 							</CardContent>

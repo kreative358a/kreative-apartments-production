@@ -418,6 +418,7 @@ export interface Profile {
 		building: string;
 		floor: number;
 		unit_number: string;
+		apartment_id: string;
 	} | null;	
 }
 

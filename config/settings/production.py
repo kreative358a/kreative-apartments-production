@@ -33,8 +33,8 @@ EMAIL_HOST_PASSWORD = getenv("SMTP_MAILGUN_PASSWORD") ## MAILERSEND_API_KEY ## x
 # EMAIL_HOST_PASSWORD =  getenv("MAILERSEND_API_KEY")
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
-# SERVER_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
-SERVER_EMAIL = getenv("EMAIL_HOST") ## "smtp.mailersend.net"
+SERVER_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
+# SERVER_EMAIL = getenv("EMAIL_HOST") ## "smtp.mailersend.net"
 DOMAIN = getenv("DOMAIN")
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
