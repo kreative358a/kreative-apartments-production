@@ -18,7 +18,7 @@ ADMIN_URL = getenv("DJANGO_ADMIN_URL")
 ALLOWED_HOSTS = [".kreative-apartments.pro"]
 # ALLOWED_HOSTS = [".homeidea.pl"]
 ADMINS = [
-    ("Piotr Kreative", "kreative-apartments@hotmail.com"),
+    ("Kreative Bonum", "kreative.apartments.login@hotmail.com"),
     ]
 
 EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
