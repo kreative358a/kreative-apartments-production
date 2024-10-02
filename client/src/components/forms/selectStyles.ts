@@ -22,11 +22,11 @@ const customStyles = {
 		marginTop: "2px",
 		marginBottom: "2px",
 		borderColor: "var(--select-border-color)",
-		borderWidth: "var(--select-border-width)",
+		borderWidth: "2px",
+		color: "var(--select-text-color)",
 		backgroundColor: state.isSelected
 			? "var(--select-option-selected-background-color)"
 			: "var(--select-option-background-color)",
-		color: "var(--select-option-selected-text-color)",
 		"&:hover": {
 			backgroundColor: "var(--select-option-hover-background-color)",
 			color: "var(--select-option-hover-text-color)",
