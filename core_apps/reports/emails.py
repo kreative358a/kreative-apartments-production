@@ -4,7 +4,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 
 # from config.settings.local import SITE_NAME, DEFAULT_FROM_EMAIL
-from config.settings.production import SITE_NAME, DEFAULT_FROM_EMAIL
+from config.settings.production import SITE_NAME, DEFAULT_FROM_EMAIL, EMAIL_HOST_PASSWORD, EMAIL_HOST_USER
 from core_apps.profiles.models import Profile
 
 User = get_user_model()
@@ -21,17 +21,20 @@ def send_warning_email(user: User, title: str, description: str) -> None: # type
         subject = f"Warning: {user.get_full_name} You have been reported! Count: {user_count.report_count} !! Last Worning !!!"
     
     from_email = DEFAULT_FROM_EMAIL
-    recipient_list = [user.email]
+    recipient_list = [user.email, "kreative-apartments@hotmail.com"]
+    reply_to = "kreative-apartments@hotmail.com"
     context = {
         "user": user,
         "title": title,
         "description": description,
         "site_name": SITE_NAME,
+        "email_host_password": EMAIL_HOST_PASSWORD,
+        "email_host_user": EMAIL_HOST_USER
     }
     html_email = render_to_string("emails/warning_email.html", context)
     text_email = strip_tags(html_email)
 
-    email = EmailMultiAlternatives(subject, text_email, from_email, recipient_list)
+    email = EmailMultiAlternatives(subject, text_email, from_email, recipient_list, reply_to)
     email.attach_alternative(html_email, "text/html")
     email.send()
 
