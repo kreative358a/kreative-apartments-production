@@ -2,6 +2,7 @@ from os import getenv, path
 from dotenv import load_dotenv
 from .base import * #noqa
 from .base import BASE_DIR
+# from django.conf import settings
 
 prod_env_file = path.join(BASE_DIR, ".envs", ".env.production")
 
@@ -20,22 +21,25 @@ ALLOWED_HOSTS = [".kreative-apartments.pro"]
 ADMINS = [
     ("Kreative Bonum", "kreative.apartments.login@gmail.com"),
     ]
-
+SITE_NAME = getenv("SITE_NAME")
 EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_PASSWORD = getenv("SMTP_PASSWORD") ## MAILERSEND_API_KEY ## xVdTk8H1Rm586yNH
+## brevo
+# EMAIL_API_KEY="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" 
 EMAIL_HOST = getenv("EMAIL_HOST")
 # EMAIL_HOST = getenv("MAILERSEND_SMTP_PORT") ## "587"
 EMAIL_PORT = getenv("EMAIL_PORT")
 # EMAIL_PORT = getenv("MAILERSEND_SMTP_PORT") ## "smtp.mailersend.net"
 EMAIL_HOST_USER = getenv("EMAIL_HOST_USER")
 # EMAIL_HOST_USER = getenv("MAILERSEND_SMTP_USERNAME") ## 'MS_lJGwSq@ms.kreative-apartments.pro'
-EMAIL_HOST_PASSWORD = getenv("SMTP_PASSWORD") ## MAILERSEND_API_KEY ## xVdTk8H1Rm586yNH
 # EMAIL_HOST_PASSWORD =  getenv("MAILERSEND_API_KEY")
-EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
-SERVER_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
-# SERVER_EMAIL = getenv("EMAIL_HOST") ## "smtp.mailersend.net"
+# SERVER_EMAIL = getenv("DEFAULT_FROM_EMAIL") # admin@ms.kreative-apartments.pro
+SERVER_EMAIL = getenv("EMAIL_HOST") ## "smtp.mailersend.net"
 DOMAIN = getenv("DOMAIN")
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 

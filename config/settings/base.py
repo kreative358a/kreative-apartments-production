@@ -4,8 +4,9 @@ from dotenv import load_dotenv
 import platform
 import cloudinary
 from datetime import timedelta
+# from django.conf import settings
 
-from django.contrib.auth import get_user_model
+# from django.contrib.auth import get_user_model
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent

@@ -7,7 +7,8 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.utils.translation import gettext_lazy as _
 
-from config.settings.local import SITE_NAME, DEFAULT_FROM_EMAIL
+# from config.settings.local import SITE_NAME, DEFAULT_FROM_EMAIL
+from config.settings.production import SITE_NAME, DEFAULT_FROM_EMAIL
 from core_apps.apartments.models import Apartment
 from core_apps.common.models import TimeStampedModel
 
