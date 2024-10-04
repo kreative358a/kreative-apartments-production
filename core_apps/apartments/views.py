@@ -180,45 +180,6 @@ class ApartmentCreateAPIView(generics.CreateAPIView):
                 status=status.HTTP_403_FORBIDDEN,
             )  
 
-class ApartmentSelectAPIView(mixins.CreateModelMixin, mixins.UpdateModelMixin,
-                    GenericAPIView):    
-    queryset = Apartment.objects.all()
-    serializer_class = ApartmentSerializer
-    renderer_classes = [GenericJSONRenderer]
-    object_label = "apartment"
-    # lookup_field = "apartment_id"        
-
-    def update(self, request: Request, *args: Any, **kwargs: Any):
-        user = request.user
-        try:
-            # Apartment.objects.filter(tenant=request.user).update(tenant="", available="enabled")
-            Apartment.objects.filter(tenant=request.user).update(tenant="", apartment_id=f"{F('apartment_id')[:-1]}y", available="enabled")
-
-        except:
-            pass          
-        if user.is_superuser or (
-            hasattr(user, "profile")
-            and user.profile.occupation == Profile.Occupation.TENANT
-        ):
-            try:
-                serializer = self.serializer_class(data=request.data)
-                initial_vals = serializer.initial_data
-                apartment = self.queryset.get(apartment_id=initial_vals["apartment_id"])
-                if apartment:
-                    pass
-
-                    
-            except Apartment.DoesNotExist:
-                return super().create(request, *args, **kwargs)
-        
-        else:
-            return Response(
-                {
-                    "message": f"You are not allowed to create an apartment, you are not a tenant. Your occupation is {user.profile.occupation}"
-                },
-                status=status.HTTP_403_FORBIDDEN,
-            )  
-          
 
 class ApartmentDetailAPIView(generics.RetrieveAPIView):
     serializer_class = ApartmentSerializer
